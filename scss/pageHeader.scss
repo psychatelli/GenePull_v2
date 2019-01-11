@@ -1,0 +1,13 @@
+
+
+.HeaderWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.PageHeader {
+    padding: 10px;
+    @extend .gray_font;
+    font-size: 20px;
+}

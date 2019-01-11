@@ -1,0 +1,126 @@
+@import "../scss/materialize";
+@import "../scss/colors";
+@import "../scss/leftnav";
+@import "../scss/infoCard";
+@import "../scss/treeItem";
+@import "../scss/imgPostPublic";
+@import "../scss/treeBranchGroup";
+@import "../scss/publicPostDetails";
+@import "../scss/GalleriesThumbnail.scss";
+@import "../scss//pageHeader.scss";
+
+body {
+    overflow-x: hidden;
+    background: #353434;
+    background: url(./img/body_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.Shadow {
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
+-moz-box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
+box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
+}
+
+a {
+    color: gray;
+}
+
+.Grid_wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.Grid_3Col {
+    display: grid;
+     grid-template-columns: 250px minmax(300px, 500px) minmax(250px, 450px);
+    grid-column-gap: 10px;
+}
+
+
+.Grid_3Col .Column:nth-child(3) {
+      height: 100vh;
+      overflow: scroll;
+      position: sticky;
+      top: 60px;     
+}
+
+
+.Grid_2Col {
+    display: grid;
+     grid-template-columns: 250px minmax(550px, 950px) ;
+    grid-column-gap: 10px;
+}
+
+
+
+.Grid_2Col_Modified {
+    display: grid;
+    grid-template-columns: minmax(300px, 500px) minmax(250px, 450px);
+
+}
+
+.Grid_3Col_1FullSpan .Column:nth-child(1) {
+border: solid thin red;
+}
+
+.Grid_2Col_Modified .Column:nth-child(2) {
+    height: 100vh;
+    overflow: scroll;
+    position: sticky;
+    top: 60px;     
+}
+
+.Grid_2Col .Column:nth-child(2) {
+
+}
+
+.Wrapper {
+    width: 100%;
+    margin: 5px;
+    background: rgba(230, 229, 229, 0.486);
+
+}
+.brand-logo {
+    margin-left: 10px; 
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+
+
+.Card {
+    padding: 10px;
+    border: solid thin rgb(224, 224, 224);
+    @extend .Shadow;
+    margin: 10px 0px 10px 0px;
+    @extend .light_gray;
+}
+
+
+.LeftCol {
+    width: 400px;
+}
+
+.MiddleCol {
+    width:500px;
+}
+
+.rightestCol {
+    width: 400px;
+    max-height: 100vh;
+    border: solid thin aqua;
+    overflow: scroll;
+    position: fixed;
+    top: 70px!important;
+    right: 0px!important;
+  }
+
+
+ 

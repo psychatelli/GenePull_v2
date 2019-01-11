@@ -1,0 +1,29 @@
+.ThumbnailList_Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+}
+
+.ThumbnailList {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    // padding: 50px;
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            @extend .light_gray_font;
+            padding: 8px; 
+            
+        }
+         
+    .img_container img{
+        width: 100%;
+
+    }
+
+  
+}
+

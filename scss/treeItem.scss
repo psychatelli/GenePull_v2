@@ -1,0 +1,46 @@
+.treeItem {
+    @extend .dark_gray_opacity;
+    display: grid ;
+    // grid-template-columns: 60px 140px 40px;
+    grid-template-columns: 25% 55% 20%;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+
+   
+
+    .box {
+        // border: solid thin aqua;
+        padding: 5px;
+    }
+
+}
+
+.treeItem div:nth-child(3) {
+    color: aqua;
+}
+
+
+
+.treeItem-group {
+    @extend .dark_gray_opacity;
+    display: grid ;
+    // grid-template-columns: 60px 140px 40px;
+    grid-template-columns: 25% 50% 20%;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    max-width: 185px;
+    .box {
+        // border: solid thin aqua;
+        padding: 5px;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.treeItem-group div:nth-child(3) {
+    color: aqua;
+}

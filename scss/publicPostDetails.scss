@@ -1,0 +1,47 @@
+
+.PublicPostDetails_Wrapper {
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    @extend .light_gray;
+
+    .Thumbnail img {
+            width: 70px;
+            @extend .Card;
+        }
+}
+
+
+ 
+.Description {
+    @extend .gray_font;
+    margin-bottom: 20px;
+    border-bottom: solid thin rgb(221, 218, 218);
+}
+
+.CommentSectionWrapper {
+    margin-bottom: 50px;
+    .Comment {
+        display: flex;
+
+
+        div {
+            padding: 3px;
+        }
+
+    }
+}
+
+.CommentSectionWrapper .Comment div:nth-child(1) {
+    display: flex;
+}
+
+.CommentSectionWrapper .Comment div:nth-child(2) {
+    display: flex;
+}
+
+.CommentSectionWrapper .Comment div:nth-child(3) {
+    display: flex;
+    align-items: flex-end;
+    @extend .gray_font;
+}
+
