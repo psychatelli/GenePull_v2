@@ -5,7 +5,7 @@ import TreeItem from '../../../components/TreeItem';
 import ThumbnailList from '../../../components/ThumbnailList';
 import Pageheader from '../../../components/PageHeader';
 
-export default class Recipies extends Component {
+export default class Recipies extends Component { 
   render() {
     return (
       <div>
@@ -29,11 +29,11 @@ export default class Recipies extends Component {
 
 
                         <div className="ThumbnailList_Wrapper"> 
-                         <ThumbnailList link="/recipe" img="https://photos.smugmug.com/Test/i-g5GnVtj/0/da49a56b/S/pizza-S.jpg" />
-                         <ThumbnailList link="/recipe" img="https://photos.smugmug.com/Test/i-W5SXVkM/0/1d663a9e/S/fettuccine-S.jpg" />
-                         <ThumbnailList link="/recipe" img="https://photos.smugmug.com/Test/i-7fksTb3/0/cafb1120/L/Enchiladas-L.jpg" />
-                         <ThumbnailList link="/recipe" img="https://photos.smugmug.com/Test/i-n2csRzx/0/1d20a7a3/S/taco1-S.jpg" />
-                        </div>
+                         <ThumbnailList title="Pizza" link="/recipe" img="https://photos.smugmug.com/Test/i-g5GnVtj/0/da49a56b/S/pizza-S.jpg" />
+                         <ThumbnailList title="Fetuchini Alredo" link="/recipe" img="https://photos.smugmug.com/Test/i-W5SXVkM/0/1d663a9e/S/fettuccine-S.jpg" />
+                         <ThumbnailList title="Enchiladas" link="/recipe" img="https://photos.smugmug.com/Test/i-7fksTb3/0/cafb1120/L/Enchiladas-L.jpg" />
+                         <ThumbnailList title="Tacos" link="/recipe" img="https://photos.smugmug.com/Test/i-n2csRzx/0/1d20a7a3/S/taco1-S.jpg" />
+                        </div> 
                     </div>
                 </div>
            </div> 

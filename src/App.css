@@ -6527,7 +6527,7 @@ input[type=range]::-ms-thumb {
 .lightest_gray {
   background: #f4f4f4; }
 
-.light_gray, .PublicPostDetails_Wrapper, .Card, .treeBranchGroup, .PublicPostDetails_Wrapper .Thumbnail img {
+.light_gray, .TargetDetails, .Card, .treeBranchGroup, .Medical_card {
   background: #fcfafac9; }
 
 .light_gray_border, .treeBranchGroup {
@@ -6539,10 +6539,10 @@ input[type=range]::-ms-thumb {
 .dark_gray_opacity, .treeItem, .treeItem-group {
   background: rgba(40, 44, 42, 0.8); }
 
-.medium_gray_opacity, .leftNav li:hover {
+.medium_gray_opacity, .leftNav li:hover, .PillItemActive {
   background: rgba(40, 44, 42, 0.562); }
 
-.gray_font, .infoCard, .Description, .CommentSectionWrapper .Comment div:nth-child(3), .PageHeader {
+.gray_font, .infoCard, .PageHeader, h3 {
   color: gray; }
 
 .wittwer_blue_font {
@@ -6671,33 +6671,6 @@ input[type=range]::-ms-thumb {
   display: grid;
   justify-content: start; }
 
-.PublicPostDetails_Wrapper {
-  padding: 10px;
-  margin: 10px 0px 10px 0px; }
-  .PublicPostDetails_Wrapper .Thumbnail img {
-    width: 70px; }
-
-.Description {
-  margin-bottom: 20px;
-  border-bottom: solid thin #dddada; }
-
-.CommentSectionWrapper {
-  margin-bottom: 50px; }
-  .CommentSectionWrapper .Comment {
-    display: flex; }
-    .CommentSectionWrapper .Comment div {
-      padding: 3px; }
-
-.CommentSectionWrapper .Comment div:nth-child(1) {
-  display: flex; }
-
-.CommentSectionWrapper .Comment div:nth-child(2) {
-  display: flex; }
-
-.CommentSectionWrapper .Comment div:nth-child(3) {
-  display: flex;
-  align-items: flex-end; }
-
 .ThumbnailList_Wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -6723,6 +6696,31 @@ input[type=range]::-ms-thumb {
   padding: 10px;
   font-size: 20px; }
 
+.Medical_card .Title {
+  color: orange;
+  font-size: 25px; }
+
+.PillList {
+  display: flex;
+  flex-wrap: wrap; }
+  .PillList div {
+    margin: 3px;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px; }
+
+.PillItem {
+  background: #ee6363; }
+
+.TargetDetails {
+  padding: 10px;
+  margin: 0px 0px 10px 0px; }
+  .TargetDetails .Thumbnail img {
+    width: 70%; }
+  .TargetDetails h3 {
+    margin: 10px 5px 5px 5px; }
+
 body {
   overflow-x: hidden;
   background: #353434;
@@ -6732,13 +6730,16 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
-.Shadow, .Card, .treeBranchGroup, .PublicPostDetails_Wrapper .Thumbnail img {
+.Shadow, .Card, .treeBranchGroup, .Medical_card {
   -webkit-box-shadow: 1px 1px 13px 0px #a399a3;
   -moz-box-shadow: 1px 1px 13px 0px #a399a3;
   box-shadow: 1px 1px 13px 0px #a399a3; }
 
 a {
   color: gray; }
+
+h3 {
+  font-size: 25px; }
 
 .Grid_wrapper {
   display: flex;
@@ -6763,6 +6764,7 @@ a {
 
 .Grid_2Col_Modified {
   display: grid;
+  grid-column-gap: 10px;
   grid-template-columns: minmax(300px, 500px) minmax(250px, 450px); }
 
 .Grid_3Col_1FullSpan .Column:nth-child(1) {
@@ -6785,7 +6787,7 @@ a {
 .material-icons {
   vertical-align: middle; }
 
-.Card, .treeBranchGroup, .PublicPostDetails_Wrapper .Thumbnail img {
+.Card, .treeBranchGroup, .Medical_card {
   padding: 10px;
   border: solid thin #e0e0e0;
   margin: 10px 0px 10px 0px; }

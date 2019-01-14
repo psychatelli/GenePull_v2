@@ -17,7 +17,7 @@ export default class RecipeStep extends Component {
                 <div className="gallery_indicator"> 
                 <i class="material-icons">collections</i>
                 </div>
-                <img src={this.props.post} alt=""/> 
+                <img src={this.props.img} alt=""/>  
             </div>
 
             <div> 

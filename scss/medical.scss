@@ -1,0 +1,38 @@
+
+.Medical_card {
+    @extend .Card;
+    // @extend .medium_gray_opacity;
+
+    .Title {
+        color: orange;
+        font-size: 25px;
+    }
+
+    .Content {
+        // color: white;
+    }
+}
+
+.PillList {
+     display: flex;
+     flex-wrap: wrap;
+
+    div {
+        margin: 3px;
+        padding: 5px;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+    }
+             
+        
+}
+
+.PillItem {
+    background: rgb(238, 99, 99);
+}
+.PillItemActive  {
+        @extend .medium_gray_opacity;
+
+    }
+

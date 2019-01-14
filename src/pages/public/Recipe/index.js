@@ -10,7 +10,7 @@ import TreeBranchGroup from '../../../components/TreeBranchGroup';
 import PublicPostDetails from '../../../components/PublicPostDetails';
 import RecipeStep from '../../../components/RecipeStep'; 
 import Pageheader from '../../../components/PageHeader';
-
+import TargetDetails from '../../../components/PublicTargetDetails'
 
 
 export default class Recipe extends React.Component {
@@ -39,27 +39,30 @@ export default class Recipe extends React.Component {
                 <div className="Grid_2Col_Modified"> 
 
                     <div className="Column">
-                        <RecipeStep img="1174001948" name="Linda Aldas" 
-                        post="https://photos.smugmug.com/Test/i-J6mRXp2/0/6d0fc701/S/phoenixvaca-S.jpg"/>
+                        <RecipeStep  
+                        img="https://photos.smugmug.com/Test/i-MH2SVHP/0/53c840fa/S/pasta-in-boiling-water-S.jpg"/>
+ 
+                        <RecipeStep  
+                        img="https://photos.smugmug.com/Test/i-VVZ4Jfg/0/dc7beace/S/BreastFifteenSpatulas-S.jpg"/>
 
-                        <RecipeStep img="100002699328486"  name="Pauline Sanchez"
-                        post="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg"/>
+                        <RecipeStep 
+                        img="https://photos.smugmug.com/Test/i-cHSqhLn/0/f7c97ec6/S/Pasta-sauce-from-scratch-S.jpg"/>
 
-                        <RecipeStep img="619562340" name="Vivi Mon"
-                        post="https://photos.smugmug.com/Test/i-3J6gxXV/0/d9bc62f6/S/LonelyGirl-S.jpg"/>
+                        <RecipeStep 
+                        img="https://photos.smugmug.com/Test/i-8Fmj9SH/0/1e610618/S/mushrooms-S.jpg"/>
 
-                        <RecipeStep img="10127597" name="Sabit Bojaj"
-                        post="https://photos.smugmug.com/Test/i-ZGwNPnR/0/528b9141/S/Christmas-Party-S.jpg"/>
+                        <RecipeStep 
+                        img="https://photos.smugmug.com/Test/i-NPcNLT7/0/4cb0aa81/M/garlic-onions-M.jpg"/>
 
-                        <RecipeStep img="1449017116" name="Tish Contrares"
-                        post="https://photos.smugmug.com/Test/i-n2csRzx/0/1d20a7a3/S/taco1-S.jpg"/>
                     </div>
 
-
                     <div className="Column">
-                    <PublicPostDetails img="100008343750912" img2="1424683623"/>
-                   
-
+                        <TargetDetails 
+                        thumbnail="https://photos.smugmug.com/Test/i-W5SXVkM/0/1d663a9e/S/fettuccine-S.jpg"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        title="Pasta" 
+                        img="100008343750912" 
+                        img2="1424683623"/>
                     </div>
 
                 </div>

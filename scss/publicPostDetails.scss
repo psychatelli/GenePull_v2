@@ -1,17 +1,16 @@
 
 .PublicPostDetails_Wrapper {
     padding: 10px;
-    margin: 10px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
     @extend .light_gray;
 
     .Thumbnail img {
-            width: 70px;
+        width: 70%;
             @extend .Card;
         }
 }
 
 
- 
 .Description {
     @extend .gray_font;
     margin-bottom: 20px;
@@ -22,7 +21,6 @@
     margin-bottom: 50px;
     .Comment {
         display: flex;
-
 
         div {
             padding: 3px;

@@ -9,7 +9,7 @@ export default class ThumbnailList extends Component {
             <div className="controls"> 
                 <div>
                   <Link to={this.props.link}>   
-                  2018
+                 {this.props.title}
                   </Link> 
                 </div>
 

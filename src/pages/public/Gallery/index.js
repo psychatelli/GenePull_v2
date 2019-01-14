@@ -7,7 +7,7 @@ import TreeItem from '../../../components/TreeItem';
 import InfoCardSkills from '../../../components/Infocard/skills';
 import ImgPostPublic from '../../../components/PublicImgPost';
 import TreeBranchGroup from '../../../components/TreeBranchGroup';
-import PublicPostDetails from '../../../components/PublicPostDetails';
+import TargetDetails from '../../../components/PublicTargetDetails';
  
 import Pageheader from '../../../components/PageHeader';
 
@@ -34,7 +34,7 @@ export default class Gallery extends React.Component {
 
             <div> 
                 <div className="HeaderWrapper"> 
-                <Pageheader text="Adam Donatelli" icon="person" />
+                <Pageheader text="Life Events 2018" icon="burst_mode" />
                 </div>
 
                 <div className="Grid_2Col_Modified"> 
@@ -45,7 +45,7 @@ export default class Gallery extends React.Component {
 
                         <ImgPostPublic img="100002699328486"  name="Pauline Sanchez"
                         post="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg"/>
-
+ 
                         <ImgPostPublic img="619562340" name="Vivi Mon"
                         post="https://photos.smugmug.com/Test/i-3J6gxXV/0/d9bc62f6/S/LonelyGirl-S.jpg"/>
 
@@ -58,7 +58,12 @@ export default class Gallery extends React.Component {
 
 
                     <div className="Column">
-                    <PublicPostDetails img="100008343750912" img2="1424683623"/>
+                    <TargetDetails 
+                    thumbnail="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg"
+                    description="
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed "
+                    img="100008343750912" 
+                    img2="1424683623"/>
                    
 
                     </div>

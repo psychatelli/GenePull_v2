@@ -5,9 +5,13 @@
 @import "../scss/treeItem";
 @import "../scss/imgPostPublic";
 @import "../scss/treeBranchGroup";
-@import "../scss/publicPostDetails";
-@import "../scss/GalleriesThumbnail.scss";
+@import "../scss/thumbnailList.scss";
 @import "../scss//pageHeader.scss";
+@import '../scss/medical.scss';
+@import '../scss/targetDetails.scss';
+
+
+
 
 body {
     overflow-x: hidden;
@@ -27,6 +31,11 @@ box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
 
 a {
     color: gray;
+}
+
+h3 {
+    font-size: 25px;
+    @extend .gray_font;
 }
 
 .Grid_wrapper {
@@ -60,6 +69,8 @@ a {
 
 .Grid_2Col_Modified {
     display: grid;
+    grid-column-gap: 10px;
+
     grid-template-columns: minmax(300px, 500px) minmax(250px, 450px);
 
 }

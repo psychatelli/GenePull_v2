@@ -6,7 +6,7 @@ import TreeItem from '../../../components/TreeItem';
 import InfoCardSkills from '../../../components/Infocard/skills';
 import ImgPostPublic from '../../../components/PublicImgPost';
 import TreeBranchGroup from '../../../components/TreeBranchGroup';
-import PublicPostDetails from '../../../components/PublicPostDetails';
+import TargetDetails from '../../../components/PublicTargetDetails';
 import Pageheader from '../../../components/PageHeader'; 
 
 export default class PublicHome extends React.Component {
@@ -54,9 +54,12 @@ export default class PublicHome extends React.Component {
 
 
                     <div className="Column">
-                    <PublicPostDetails img="100008343750912" img2="1424683623"/>
-                    <TreeBranchGroup title="Mom"/>
-                    <TreeBranchGroup title="Dad"/>
+                    <TargetDetails 
+                    thumbnail="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+                    img="100008343750912"  
+                    img2="1424683623"/>
+                  
 
                     </div>
 

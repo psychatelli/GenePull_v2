@@ -24,14 +24,14 @@ export default class PublicGalleries extends Component {
 
                     <div className="Column">
                         <div className="HeaderWrapper"> 
-                        <Pageheader text="Galleries" icon="burst_mode" />
+                        <Pageheader text="Life Events" icon="burst_mode" />
                         </div>
                         <div className="ThumbnailList_Wrapper"> 
-                         <ThumbnailList link="gallery" img="https://photos.smugmug.com/Test/i-J6mRXp2/0/6d0fc701/S/phoenixvaca-S.jpg" />
-                         <ThumbnailList link="gallery" img="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg" />
-                         <ThumbnailList link="gallery" img="https://photos.smugmug.com/Test/i-3J6gxXV/0/d9bc62f6/S/LonelyGirl-S.jpg" />
-                         <ThumbnailList link="gallery" img="https://photos.smugmug.com/Test/i-ZGwNPnR/0/528b9141/S/Christmas-Party-S.jpg" />
-                        </div>
+                         <ThumbnailList title="2015" link="gallery" img="https://photos.smugmug.com/Test/i-J6mRXp2/0/6d0fc701/S/phoenixvaca-S.jpg" />
+                         <ThumbnailList title="2016" link="gallery" img="https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg" />
+                         <ThumbnailList title="2017" link="gallery" img="https://photos.smugmug.com/Test/i-3J6gxXV/0/d9bc62f6/S/LonelyGirl-S.jpg" />
+                         <ThumbnailList title="2018" link="gallery" img="https://photos.smugmug.com/Test/i-ZGwNPnR/0/528b9141/S/Christmas-Party-S.jpg" />
+                        </div> 
                     </div>
                 </div>
            </div> 
