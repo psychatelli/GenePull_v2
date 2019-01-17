@@ -4,10 +4,7 @@ import LeftNav from '../../../components/LeftNav';
 import InfoCard from '../../../components/Infocard';
 import TreeItem from '../../../components/TreeItem';
 
-import InfoCardSkills from '../../../components/Infocard/skills';
-import ImgPostPublic from '../../../components/PublicImgPost';
-import TreeBranchGroup from '../../../components/TreeBranchGroup';
-import PublicPostDetails from '../../../components/PublicPostDetails';
+
 import RecipeStep from '../../../components/RecipeStep'; 
 import Pageheader from '../../../components/PageHeader';
 import TargetDetails from '../../../components/PublicTargetDetails'

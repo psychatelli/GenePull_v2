@@ -6527,13 +6527,13 @@ input[type=range]::-ms-thumb {
 .lightest_gray {
   background: #f4f4f4; }
 
-.light_gray, .TargetDetails, .Card, .treeBranchGroup, .Medical_card {
+.light_gray, .TargetDetails, .Card, .TreeBranchGroup, .Medical_card {
   background: #fcfafac9; }
 
-.light_gray_border, .treeBranchGroup {
+.light_gray_border, .TreeBranchGroup {
   border: solid thin #d1cfcf; }
 
-.light_gray_font, .imgPostPublic .controls, .ThumbnailList .controls {
+.light_gray_font, .ThumbnailList .controls {
   color: #b6b5b5; }
 
 .dark_gray_opacity, .treeItem, .treeItem-group {
@@ -6542,7 +6542,7 @@ input[type=range]::-ms-thumb {
 .medium_gray_opacity, .leftNav li:hover, .PillItemActive {
   background: rgba(40, 44, 42, 0.562); }
 
-.gray_font, .infoCard, .PageHeader, h3 {
+.gray_font, .infoCard, .imgPostPublic .controls, .Branch_title, .PageHeader, h3 {
   color: gray; }
 
 .wittwer_blue_font {
@@ -6578,8 +6578,6 @@ input[type=range]::-ms-thumb {
 .leftNav li {
   transition: background-color 0.2s ease;
   padding: 10px; }
-  .leftNav li i {
-    color: aqua; }
 
 .leftNav li:hover {
   color: white; }
@@ -6639,7 +6637,13 @@ input[type=range]::-ms-thumb {
       float: right;
       padding-right: 10px; }
 
-.treeBranchGroup {
+.TreeBranchWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 390px);
+  justify-content: center;
+  grid-gap: 1em; }
+
+.TreeBranchGroup {
   border-radius: 10px; }
 
 .Branch_title {
@@ -6647,29 +6651,30 @@ input[type=range]::-ms-thumb {
   text-transform: uppercase;
   font-weight: bold; }
 
-.treeBranchGroup_Parent {
+.TreeBranchGroup_Parent {
   display: grid;
   grid-template-columns: auto auto; }
-  .treeBranchGroup_Parent .member {
+  .TreeBranchGroup_Parent .Member {
     margin: 1px; }
 
-.treeBranchGroup_Child {
+.TreeBranchGroup_Child {
   display: grid;
   grid-template-columns: auto auto auto; }
-  .treeBranchGroup_Child .member {
-    margin: 1px; }
 
-.treeBranchGroup_Child_end {
+.TreeBranchGroup_start,
+.TreeBranchGroup_Child_center,
+.TreeBranchGroup_Child_end {
   display: grid;
-  justify-content: end; }
+  margin: 3px; }
 
-.treeBranchGroup_Child_center {
-  display: grid;
+.TreeBranchGroup_start {
+  justify-content: start; }
+
+.TreeBranchGroup_Child_center {
   justify-content: center; }
 
-.treeBranchGroup_start {
-  display: grid;
-  justify-content: start; }
+.TreeBranchGroup_Child_end {
+  justify-content: end; }
 
 .ThumbnailList_Wrapper {
   display: grid;
@@ -6690,9 +6695,14 @@ input[type=range]::-ms-thumb {
 .HeaderWrapper {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center; }
 
+.HeaderWrapper div:nth-child(2) {
+  margin-right: 30px; }
+
 .PageHeader {
+  display: flex;
   padding: 10px;
   font-size: 20px; }
 
@@ -6730,7 +6740,7 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
-.Shadow, .Card, .treeBranchGroup, .Medical_card {
+.Shadow, .Card, .TreeBranchGroup, .Medical_card {
   -webkit-box-shadow: 1px 1px 13px 0px #a399a3;
   -moz-box-shadow: 1px 1px 13px 0px #a399a3;
   box-shadow: 1px 1px 13px 0px #a399a3; }
@@ -6787,7 +6797,7 @@ h3 {
 .material-icons {
   vertical-align: middle; }
 
-.Card, .treeBranchGroup, .Medical_card {
+.Card, .TreeBranchGroup, .Medical_card {
   padding: 10px;
   border: solid thin #e0e0e0;
   margin: 10px 0px 10px 0px; }

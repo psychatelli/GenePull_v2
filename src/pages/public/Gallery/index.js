@@ -34,7 +34,7 @@ export default class Gallery extends React.Component {
 
             <div> 
                 <div className="HeaderWrapper"> 
-                <Pageheader text="Life Events 2018" icon="burst_mode" />
+                <Pageheader text="2018 Highlights" icon="burst_mode" />
                 </div>
 
                 <div className="Grid_2Col_Modified"> 

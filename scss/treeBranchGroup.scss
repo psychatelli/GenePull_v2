@@ -1,47 +1,60 @@
 
-.treeBranchGroup {
+.TreeBranchWrapper {
+    display: grid;
+    // grid-template-columns: 390px 390px;
+    grid-template-columns: repeat(auto-fill, 390px );
+
+    justify-content: center;
+    grid-gap: 1em;
+}
+
+.TreeBranchGroup {
     //padding: 10px;
     @extend .Card;
     @extend .light_gray_border;
     border-radius: 10px;
+    // max-width: 390px;
 }
 
 .Branch_title {
     padding: 5px;
     text-transform: uppercase;
     font-weight: bold;
+    @extend .gray_font;
 }
-.treeBranchGroup_Parent {
+.TreeBranchGroup_Parent {
     display: grid;
     grid-template-columns: auto auto;
 
-    .member {
+    .Member {
         margin: 1px;
     }
 }
 
-.treeBranchGroup_Child {
+.TreeBranchGroup_Child {
     display: grid;
     grid-template-columns: auto auto auto;
-
-    .member {
-        margin: 1px;
-    }
+   
 }
 
-
-
-.treeBranchGroup_Child_end {
+.TreeBranchGroup_start,
+.TreeBranchGroup_Child_center,
+.TreeBranchGroup_Child_end {
     display: grid;
-    justify-content: end
+    margin: 3px;
 }
 
-.treeBranchGroup_Child_center {
-    display: grid;
+.TreeBranchGroup_start {
+    justify-content: start;
+}
+
+.TreeBranchGroup_Child_center {
     justify-content: center;
 }
 
-.treeBranchGroup_start {
-    display: grid;
-    justify-content: start;
+.TreeBranchGroup_Child_end {
+    justify-content: end
 }
+
+
+

@@ -3,10 +3,10 @@
     flex-direction: column;
     padding: 50px;
 
-        .controls {
+        .controls { 
             display: flex;
             justify-content: space-between;
-            @extend .light_gray_font;
+            @extend .gray_font;
             padding: 8px; 
             
             .Name {

@@ -31,8 +31,8 @@
 .PillItem {
     background: rgb(238, 99, 99);
 }
+
 .PillItemActive  {
         @extend .medium_gray_opacity;
-
-    }
+}
 

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Avatar from 'react-avatar';
 import { Link } from 'react-router-dom';
 
-export default class TreeItemGroup extends Component {
+// TreeGroupItem
+
+export default class TreeBranchItem extends Component {
   render() {
     return (
       <div>

@@ -11,7 +11,7 @@ export default class TreeItem extends Component {
             </div>
             <div class="box"> {this.props.name} <br/> {this.props.location}</div>
             <div class="box">
-                {this.props.bornYear}
+                {this.props.bornYear} 
             </div>
         </div>
       </div>

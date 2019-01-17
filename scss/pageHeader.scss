@@ -3,11 +3,18 @@
 .HeaderWrapper {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+.HeaderWrapper div:nth-child(2) {
+    margin-right: 30px;
+}
+
 .PageHeader {
+    display: flex;
     padding: 10px;
     @extend .gray_font;
     font-size: 20px;
+
 }
