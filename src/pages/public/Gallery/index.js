@@ -5,7 +5,7 @@ import InfoCard from '../../../components/Infocard';
 import TreeItem from '../../../components/TreeItem';
 
 import InfoCardSkills from '../../../components/Infocard/skills';
-import ImgPostPublic from '../../../components/PublicImgPost';
+import ImgPostPublic from '../../../components/PostItem';
 import TreeBranchGroup from '../../../components/TreeBranchGroup';
 import TargetDetails from '../../../components/PublicTargetDetails';
  
@@ -18,9 +18,9 @@ export default class Gallery extends React.Component {
       return (
         <div className="Wrapper"> 
         <div className="Grid_wrapper">
+            
             <div className="Grid_2Col">
-
-            <div className="Column_feed">
+            <div className="Column1">
                 <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                 <LeftNav/>
                 <InfoCard location='St. Petersburg'
@@ -32,12 +32,12 @@ export default class Gallery extends React.Component {
             
 
 
-            <div> 
+            <div className="Column2"> 
                 <div className="HeaderWrapper"> 
                 <Pageheader text="2018 Highlights" icon="burst_mode" />
                 </div>
 
-                <div className="Grid_2Col_Modified"> 
+                <div className="Grid_2Col_Container"> 
 
                     <div className="Column">
                         <ImgPostPublic img="1174001948" name="Linda Aldas" 

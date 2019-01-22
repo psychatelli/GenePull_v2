@@ -1,4 +1,4 @@
-.imgPostPublic {
+.imgPost {
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -11,6 +11,10 @@
             
             .Name {
                 @extend .dark_gray_font;
+            }
+
+            i {
+                margin-right: 5px;
             }
         }
         

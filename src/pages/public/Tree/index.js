@@ -62,13 +62,14 @@ import TreeBranchGroup from '../../../components/TreeBranchGroup';
                 <div className="HeaderWrapper"> 
                 <Pageheader text="Tree" icon="burst_mode" />
                 <div>
+                    
                 <List>
                     <a 
                     className="btn-floating teal darken-1"
                     aria-haspopup="true"
-                            aria-controls="lock-menu"
-                            // aria-label="When device is locked"
-                            onClick={this.handleClickListItem}
+                    aria-controls="lock-menu"
+                    // aria-label="When device is locked"
+                    onClick={this.handleClickListItem}
                     >
                     <i className="material-icons">menu</i></a>
                 </List>
@@ -76,7 +77,7 @@ import TreeBranchGroup from '../../../components/TreeBranchGroup';
                     <Menu  id="lock-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
                         <MenuItem  selected={0 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/tree">Immediate Family</Link>  </MenuItem>
                         <MenuItem  selected={1 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/tree/grandparents">Granparents View</Link>  </MenuItem>
-                        <MenuItem  selected={2 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/full">Family Hubs</Link>  </MenuItem>
+                        <MenuItem  selected={2 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/tree/familyHub">Family Hubs</Link>  </MenuItem>
                     </Menu>
                 </div>
 

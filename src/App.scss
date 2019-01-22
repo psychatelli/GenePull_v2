@@ -1,16 +1,16 @@
 @import "../scss/materialize";
+@import "../scss/grid";
 @import "../scss/colors";
 @import "../scss/leftnav";
 @import "../scss/infoCard";
 @import "../scss/treeItem";
-@import "../scss/imgPostPublic";
+@import "../scss/imgPost";
 @import "../scss/treeBranchGroup";
 @import "../scss/thumbnailList.scss";
 @import "../scss//pageHeader.scss";
 @import '../scss/medical.scss';
 @import '../scss/targetDetails.scss';
-
-
+@import '../scss/editNav';
 
 
 body {
@@ -28,9 +28,13 @@ body {
 -moz-box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
 box-shadow: 1px 1px 13px 0px rgba(163,153,163,1);
 }
-
+ 
 a {
     color: gray;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 h3 {
@@ -38,64 +42,13 @@ h3 {
     @extend .gray_font;
 }
 
-.Grid_wrapper {
-    display: flex;
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
-.Grid_3Col {
-    display: grid;
-     grid-template-columns: 250px minmax(300px, 500px) minmax(250px, 450px);
-    grid-column-gap: 10px;
-}
-
-
-.Grid_3Col .Column:nth-child(3) {
-      height: 100vh;
-      overflow: scroll;
-      position: sticky;
-      top: 60px;     
-}
-
-
-.Grid_2Col {
-    display: grid;
-     grid-template-columns: 250px minmax(550px, 950px) ;
-    grid-column-gap: 10px;
-}
-
-
-
-.Grid_2Col_Modified {
-    display: grid;
-    grid-column-gap: 10px;
-
-    grid-template-columns: minmax(300px, 500px) minmax(250px, 450px);
-
-}
-
-.Grid_3Col_1FullSpan .Column:nth-child(1) {
-border: solid thin red;
-}
-
-.Grid_2Col_Modified .Column:nth-child(2) {
-    height: 100vh;
-    overflow: scroll;
-    position: sticky;
-    top: 60px;     
-}
-
-.Grid_2Col .Column:nth-child(2) {
-
-}
 
 .Wrapper {
     width: 100%;
     margin: 5px;
     background: rgba(230, 229, 229, 0.486);
-
 }
+
 .brand-logo {
     margin-left: 10px; 
 }

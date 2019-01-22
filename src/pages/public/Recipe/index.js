@@ -17,7 +17,7 @@ export default class Recipe extends React.Component {
         <div className="Grid_wrapper">
             <div className="Grid_2Col">
 
-            <div className="Column_feed">
+            <div className="Column1">
                 <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                 <LeftNav/>
                 <InfoCard location='St. Petersburg'
@@ -28,12 +28,19 @@ export default class Recipe extends React.Component {
             </div>
             
 
-            <div> 
+            <div className="Column2"> 
                 <div className="HeaderWrapper"> 
-                <Pageheader text="Recipe" icon="fastfood" />
+                    <div> 
+                    <Pageheader text="Recipe" icon="fastfood" />
+                    </div>
+
+                    <div>
+                    <a className="btn-floating btn-small waves-effect waves-light grey"><i className="material-icons">edit</i></a>
+
+                    </div>
                 </div>
 
-                <div className="Grid_2Col_Modified"> 
+                <div className="Grid_2Col_Container"> 
 
                     <div className="Column">
                         <RecipeStep  

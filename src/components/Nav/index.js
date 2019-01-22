@@ -14,17 +14,15 @@ export default class Nav extends React.Component {
                     <a href="/" className="brand-logo">GP</a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li>
-                        <Link to="/test-grid"> 
-                             Test Grid
+                        <Link to="/public-profile"> 
+                             Public Profile
                         </Link> </li>
                         <li>
                         <Link to="/profile"> 
                             <span className="large material-icons">account_circle</span> Adam
                         </Link></li>
                         <li><a href="badges.html"><span> <i className="large material-icons">arrow_drop_down</i> </span></a></li>
-                        <li><a href="collapsible.html">
-                        
-</a></li>
+                        <li><a href="collapsible.html"></a></li>
                     </ul>
                 </div>
             </nav>

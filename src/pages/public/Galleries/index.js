@@ -12,7 +12,7 @@ export default class PublicGalleries extends Component {
           <div className="Grid_wrapper">
                 
                 <div className="Grid_2Col">
-                    <div className="Column">
+                    <div className="Column1">
                         <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                         <LeftNav/>
                         <InfoCard location='St. Petersburg'
@@ -21,8 +21,8 @@ export default class PublicGalleries extends Component {
                             bornIn="Hobbs,NM"
                             />
                     </div>
-
-                    <div className="Column">
+ 
+                    <div className="Column2">
                         <div className="HeaderWrapper"> 
                         <Pageheader text="Life Events" icon="burst_mode" />
                         </div>

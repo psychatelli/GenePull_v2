@@ -14,6 +14,15 @@ import FullTree from './pages/public/Tree/fullTree';
 import GrandparentsTree from './pages/public/Tree/grandparents';
 
 
+import Profile  from './pages/profile/Home';
+import ProfileGalleries from './pages/profile/Galleries';
+import ProfileGallery from './pages/profile/Gallery';
+import ProfileRecipies from './pages/profile/Recipies';
+import ProfileRecipe from './pages/profile/Recipe';
+import ProfileHealth from './pages/profile/Health';
+import ProfileTree from './pages/profile/Tree';
+import ProfileFullTree from './pages/profile/Tree/fullTree';
+import ProfileGrandparentsTree from './pages/profile/Tree/grandparents';
 
 class App extends Component {
   render() {
@@ -22,7 +31,7 @@ class App extends Component {
           <div>
             <Nav/>
               <div className="Wrapper"> 
-              <Route exact path="/profile" component={PublicHome} />
+              <Route exact path="/public-profile" component={PublicHome} />
               <Route exact path="/galleries" component={PublicGalleries} />
               <Route exact path="/test-grid" component={TestGrid} />
               <Route exact path="/gallery" component={Gallery} />
@@ -32,6 +41,17 @@ class App extends Component {
               <Route exact path="/tree" component={Tree} />
               <Route exact path="/tree/familyHub" component={FullTree} />
               <Route exact path="/tree/grandparents" component={GrandparentsTree} />
+
+
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/profile/galleries" component={ProfileGalleries} />
+              <Route exact path="/profile/gallery" component={ProfileGallery} />
+              <Route exact path="/profile/recipies" component={ProfileRecipies} />
+              <Route exact path="/profile/recipe" component={ProfileRecipe} />
+              <Route exact path="/profile/health-watch" component={ProfileHealth} />
+              <Route exact path="/profile/tree" component={ProfileTree} />
+              <Route exact path="/profile/tree/familyHub" component={ProfileFullTree} />
+              <Route exact path="/profile/tree/grandparents" component={ProfileGrandparentsTree} />
 
               </div>
           </div>
