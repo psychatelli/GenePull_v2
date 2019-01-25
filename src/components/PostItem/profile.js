@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import List from '@material-ui/core/List';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import TargetDetails from '../../../components/TargetDetails/profile';
+
+
+
 
 export default class ImgPostProfile extends Component {
 
@@ -33,17 +37,21 @@ export default class ImgPostProfile extends Component {
       };
 
 
-
+      showDetails = () => {
+          let Post = this.props.post
+          console.log(Post.name, Post.img)
+        }
 
   render() {
     const { anchorEl } = this.state;
+    const { post } = this.props;
 
     return (
       <div> 
-        <div className="imgPost Card"> 
+        <div onClick={this.showDetails} className="imgPost Card"> 
             <div className="controls"> 
                 <div>   
-                  <Avatar facebookId={this.props.img} size="40" round={true} /> <span className="Name"> {this.props.name}</span>
+                  <Avatar facebookId={post.img} size="40" round={true} /> <span className="Name"> {post.name}</span>
                 </div>
 
                 <div> 
@@ -52,7 +60,7 @@ export default class ImgPostProfile extends Component {
                         <a  aria-haspopup="true" aria-controls="lock-menu" onClick={this.handleClickListItem}>
                         <i className="material-icons">more_horiz</i></a>
                     </List>
-
+ 
                     <Menu  id="lock-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
                         <MenuItem  selected={0 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/tree">Share</Link>  </MenuItem>
                         <MenuItem  selected={1 === this.state.selectedIndex} onClick={this.handleClose}> <Link to="/tree/grandparents">Edit</Link>  </MenuItem>
@@ -63,12 +71,16 @@ export default class ImgPostProfile extends Component {
             </div>
             <div className="img_container">
                 <div className="gallery_indicator"> 
-                <i class="material-icons">collections</i>
-                </div>
-                <img src={this.props.post} alt=""/> 
+                <i className="material-icons">collections</i>
+                </div> 
+                <img src={post.thumbnail} alt=""/> 
             </div>
         </div>
       </div>
     )
   }
 }
+
+ImgPostProfile.propTypes = {
+    Posts: PropTypes.object.isRequired
+  };   

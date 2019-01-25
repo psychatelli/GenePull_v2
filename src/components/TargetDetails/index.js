@@ -29,38 +29,37 @@ export default class TargetDetails extends Component {
         <div className="CommentSectionWrapper"> 
          
           <div className="Card Comment">
-            <div>
-            <Avatar facebookId={this.props.img} size="50" round={true} /> 
-            </div>
+                <div>
+                <Avatar facebookId={this.props.img} size="50" round={true} /> 
+                </div>
 
-            <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <div>
+                1- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.             
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
 
-            </div>
-
-            <div>
-              Reply
-            </div>
-
+                <div>
+                  Reply
+                </div>
           </div>
        
 
 
           <div className="Comment Card">
-            <div>
-            <Avatar facebookId={this.props.img2} size="50" round={true} /> 
-            </div>
+                <div>
+                <Avatar facebookId={this.props.img2} size="50" round={true} /> 
+                </div>
 
-            <div>
-            Sed do eiusmodLorem ipsum dolor sit amet.
-            </div>
+                <div>
+                Sed do eiusmodLorem ipsum dolor sit amet.
+                </div>
 
-            <div>
-              Reply
-            </div>
-
+                <div>
+                  Reply
+                </div>
           </div>
+
+          
         </div>
 
 

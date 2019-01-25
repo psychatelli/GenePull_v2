@@ -6,7 +6,7 @@ import TreeItem from '../../../components/TreeItem';
 
  
 import Pageheader from '../../../components/PageHeader';
-import TargetDetails from '../../../components/PublicTargetDetails'
+import TargetDetails from '../../../components/TargetDetails';
 
 
 export default class ProfileHealth extends React.Component {

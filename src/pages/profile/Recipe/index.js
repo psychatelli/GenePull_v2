@@ -7,7 +7,7 @@ import TreeItem from '../../../components/TreeItem';
 
 import RecipeStep from '../../../components/RecipeStep'; 
 import Pageheader from '../../../components/PageHeader';
-import TargetDetails from '../../../components/PublicTargetDetails'
+import TargetDetails from '../../../components/TargetDetails'
 
 
 export default class ProfileRecipe extends React.Component {

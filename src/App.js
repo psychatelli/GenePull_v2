@@ -15,6 +15,8 @@ import GrandparentsTree from './pages/public/Tree/grandparents';
 
 
 import Profile  from './pages/profile/Home';
+import EditableField  from './pages/profile/Home/example';
+
 import ProfileGalleries from './pages/profile/Galleries';
 import ProfileGallery from './pages/profile/Gallery';
 import ProfileRecipies from './pages/profile/Recipies';
@@ -43,6 +45,7 @@ class App extends Component {
               <Route exact path="/tree/grandparents" component={GrandparentsTree} />
 
 
+              <Route exact path="/profile2" component={EditableField} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/profile/galleries" component={ProfileGalleries} />
               <Route exact path="/profile/gallery" component={ProfileGallery} />
@@ -52,6 +55,7 @@ class App extends Component {
               <Route exact path="/profile/tree" component={ProfileTree} />
               <Route exact path="/profile/tree/familyHub" component={ProfileFullTree} />
               <Route exact path="/profile/tree/grandparents" component={ProfileGrandparentsTree} />
+
 
               </div>
           </div>

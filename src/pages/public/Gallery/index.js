@@ -7,7 +7,7 @@ import TreeItem from '../../../components/TreeItem';
 import InfoCardSkills from '../../../components/Infocard/skills';
 import ImgPostPublic from '../../../components/PostItem';
 import TreeBranchGroup from '../../../components/TreeBranchGroup';
-import TargetDetails from '../../../components/PublicTargetDetails';
+import TargetDetails from '../../../components/TargetDetails';
  
 import Pageheader from '../../../components/PageHeader';
 
