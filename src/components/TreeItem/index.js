@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 import Avatar from 'react-avatar';
 
-export default class TreeItem extends Component {
-  render() {
-    return (
-      <div>
+const TreeItem = (props) => {
+  return (
+<div>
         <div className="treeItem">
-            <div class="box">
-            <Avatar facebookId={this.props.img} size="50" round={true} />  
+            <div className="box">
+            <Avatar facebookId={props.img} size="50" round={true} />  
             </div>
-            <div class="box"> {this.props.name} <br/> {this.props.location}</div>
-            <div class="box">
-                {this.props.bornYear} 
+            <div className="box"> {props.name} <br/> {props.location}</div>
+            <div className="box">
+                {props.bornYear} 
             </div>
         </div>
       </div>
-    )
-  }
-}
+  );
+};
+
+export default TreeItem;
+
+

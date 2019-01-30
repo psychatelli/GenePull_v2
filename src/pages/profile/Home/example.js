@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 
 //Source for this code
 // https://codereview.stackexchange.com/questions/176495/react-component-click-to-edit-text

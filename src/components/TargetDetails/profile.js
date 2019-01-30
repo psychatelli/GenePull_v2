@@ -17,7 +17,7 @@ export default class TargetDetails extends Component {
             {this.props.description}
           </p>
           </div>
-
+ 
 
 
         <div class="input-field col s12">
@@ -25,41 +25,23 @@ export default class TargetDetails extends Component {
 
           <input type="text" placeholder="Comment..." className="autocomplete"/>
         </div>
-
+ 
         <div className="CommentSectionWrapper"> 
          
-          <div className="Card Comment">
+          {/* <div className="Card Comment">
                 <div>
                 <Avatar facebookId={this.props.img} size="50" round={true} /> 
                 </div>
-
+ 
                 <div>
-                1- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.             
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {this.props.comments}
                 </div>
-
+ 
                 <div>
                   Reply
                 </div>
-          </div>
+          </div> */}
        
-
-
-          <div className="Comment Card">
-                <div>
-                <Avatar facebookId={this.props.img2} size="50" round={true} /> 
-                </div>
-
-                <div>
-                Sed do eiusmodLorem ipsum dolor sit amet.
-                </div>
-
-                <div>
-                  Reply
-                </div>
-          </div>
-
-          
         </div>
 
 
