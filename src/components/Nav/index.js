@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const Nav = () => { 
 
-
-
-export default class Nav extends React.Component {
-    render() {
-      return (
-
+    return(
         <div className="navbar-fixed">
             <nav className="medium_gray_opacity"> 
                 <div className="nav-wrapper">
@@ -27,8 +23,12 @@ export default class Nav extends React.Component {
                 </div>
             </nav>
         </div>
+    )
+};
 
-    );
- }
-}
+
+export default Nav; 
+
+
+
 

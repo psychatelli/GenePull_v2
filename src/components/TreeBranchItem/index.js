@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
 import Avatar from 'react-avatar';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-// TreeGroupItem
+const TreeBranchItem = ({ img, link, name, bornYear}) => { 
 
-export default class TreeBranchItem extends Component {
-  render() {
-    return (
-      <div>
-        <div className="treeItem-group">
+    return(
+      <div className="treeItem-group">
 
-              <div class="box">
-              <Link to={this.props.link}>
-                <Avatar facebookId={this.props.img} size="40" round={true} />
-              </Link> 
-              </div>
-              <div class="box"> <Link to={this.props.link}> {this.props.name} </Link> </div>
-              <div class="box">
-                  {this.props.bornYear}
-              </div>
-            
-        </div>
+      <div className="box">
+      <Link to={link}>
+        <Avatar facebookId={img} size="40" round={true} />
+      </Link> 
       </div>
+      <div className="box"> <Link to={link}> {name} </Link> </div>
+      <div className="box">
+          {bornYear}
+      </div>
+    
+</div>
     )
-  }
-}
+};
+
+TreeBranchItem.propTypes = {
+    img: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    bornYear: PropTypes.string.isRequired,
+    
+  };
+  
+export default TreeBranchItem; 
+
+
+

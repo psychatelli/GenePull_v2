@@ -6,20 +6,119 @@ import TreeItem from '../../../components/TreeItem';
 
  
 import Pageheader from '../../../components/PageHeader';
-import TargetDetails from '../../../components/TargetDetails';
-
+import TargetDetails from '../../../components/TargetDetails/profile';
+import Pill from '../../../components/common/pill';
+import Comment from '../../../components/comment/profile';
+import Textbox from '../../../components/TextBox';
 
 export default class ProfileHealth extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+                selectedTitle: this.title,
+                selectedSymptoms: this.selectedSymptoms,
+                selectedTreatment: this.selectedTreatment,
+                selectedMedications: this.selectedMedications,
+                selectedResults: this.selectedResults,
+                selectedComment: 0,
+                Data : [
+                    {
+                        id: 0,
+                        title: 'Constant Headackes',
+                        symptoms: 'head hurt',
+                        treatment: 'Adam Donatelli',
+                        medications: 'coffe',
+                        results: 'felt better',
+                        comments: [
+                                    {
+                                    id: 0,
+                                    img: '100008343750912',
+                                    comment: '0 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                                    },
+                                    {
+                                    id: 1,
+                                    img: '100008343750912',
+                                    comment: '0 - Lorem ipsum dolor sit amet, consectetur.',
+                                    }
+                                  ]
+                        },
+                        {
+                        id: 1,
+                        title: 'Pimples',
+                        symptoms: 'Face looked bad',
+                        treatment: 'Adam Donatelli',
+                        medications: 'coffe',
+                        results: 'felt better',
+                        comments: [
+                                    {
+                                    id: 0,
+                                    img: '100008343750912',
+                                    comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
+                                    },
+                                    {
+                                    id: 1,
+                                    img: '100008343750912',
+                                    comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
+                                    }
+                                  ]
+                        },
+                        
+                ],
+                   }
+                   this.state.selectedSymptoms = this.state.Data[0].symptoms;
+                   this.state.selectedTreatment = this.state.Data[0].treatment;
+                   this.state.selectedMedications = this.state.Data[0].medications;
+                   this.state.selectedResults = this.state.Data[0].results;
+            }
+
+
+            ShowDetails(medical) {
+                console.log(medical);
+
+                this.setState({
+                    selectedSymptoms: medical.symptoms,
+                    selectedTreatment: medical.treatment,
+                    selectedMedications: medical.medications,
+                    selectedResults: medical.results,
+                    selectedComment: medical.id
+                });
+            }
+
     render() {
+
+        const Pills = this.state.Data.map(medical => (
+                <Pill 
+                selected={'PillItem'} 
+                text={medical.title}
+                showDetails={this.ShowDetails.bind(this, medical)}
+                />
+        ));
+
+        const Comments = this.state.Data[this.state.selectedComment].comments.map(x => (
+            <Comment  
+                key={x.id}  
+                avatar={x.img} 
+                comment={x.comment} />
+        ));
+
+
+        
+
+
+
       return (
         <div className="Wrapper"> 
         <div className="Grid_wrapper">
             <div className="Grid_2Col">
 
-            <div className="Column_feed">
+
+
+            <div className="Column1">
                 <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                 <LeftNav/>
-                <InfoCard location='St. Petersburg'
+                <InfoCard 
+                    location='St. Petersburg'
                     age='35'
                     education='University of Arizona'
                     bornIn="Hobbs,NM"
@@ -27,77 +126,58 @@ export default class ProfileHealth extends React.Component {
             </div>
             
 
-            <div> 
+            <div className="Column2"> 
                 <div className="HeaderWrapper"> 
                 <Pageheader text="Health Watch" icon="local_hospital" /> 
                 </div>
 
-                <div className="Grid_2Col_Modified"> 
+        <div className="Grid_2Col_Modified"> 
 
                     <div className="Column">
-
                         <div className="PillList">
-                                <div className="PillItemActive">Contant Headaches</div>
-                                <div className="PillItem">Pimples</div>
-                                <div className="PillItem">Flu</div>
-                                <div className="PillItem">Cancer</div>
-                                <div className="PillItem">Allergies</div>
-                                <div className="PillItem">Kidney Stones</div>
-                                <div className="PillItem">Kidney Stones</div>
-                                <div className="PillItem">Kidney Stones</div>
-                                <div className="PillItem">Kidney Stones</div>
+                                {Pills}
                         </div>
                        
-                       <div className="Medical_card">
-                           <div className="Title"> Symptoms </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       <Textbox 
+                        title="Symptoms"
+                        content= {this.state.selectedSymptoms}
+                       />
+                       
+                       <Textbox 
+                        title="Treatment Approach"
+                        content= {this.state.selectedTreatment}
+                       />
 
-                       <div className="Medical_card">
-                           <div className="Title"> Treatment Approach </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       <Textbox 
+                        title="Medications"
+                        content= {this.state.selectedMedications}
+                       />
 
-                       <div className="Medical_card">
-                           <div className="Title"> Medications </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                        <Textbox 
+                        title="Results"
+                        content= {this.state.selectedResults}
+                       />
+                       
+                     </div>  {/* end Column */}
 
-                       <div className="Medical_card">
-                           <div className="Title"> Results </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
-
-                    </div>
 
                     <div className="Column">
                         <TargetDetails 
-                        thumbnail="" 
                         title="Contant Headaches" 
                         img="100008343750912" 
                         img2="1424683623"/>
+
+                        {Comments}
                     </div>
 
-                </div>
+    </div> {/* end Grid_2Col */}
+
+
+
+
+
 
             </div>
-            
             </div>
         </div>
         </div>

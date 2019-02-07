@@ -6,7 +6,7 @@
         .controls { 
             display: flex;
             justify-content: space-between;
-            @extend .gray_font;
+            @extend .gray_font; 
             padding: 8px; 
             
             .Name {
@@ -17,6 +17,8 @@
                 margin-right: 5px;
             }
         }
+
+
         
     .img_container img{
         width: 100%;

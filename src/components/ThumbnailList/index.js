@@ -1,34 +1,45 @@
 import React, { Component } from 'react'
 import Avatar from 'react-avatar';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export default class ThumbnailList extends Component {
-  render() {
-    return (
+const ThumbnailList = ({ link, title, img}) => { 
+
+    return(
         <div className="ThumbnailList Card"> 
-            <div className="controls"> 
-                <div>
-                  <Link to={this.props.link}>   
-                 {this.props.title}
-                  </Link> 
-                </div>
+        <div className="controls"> 
+            <div>
+              <Link to={link}>   
+             {title}
+              </Link> 
+            </div>
 
-                <div>  <i class="material-icons">redo</i></div>
-            </div>
-            <div className="img_container">
-                {/* <div className="gallery_indicator"> 
-                <i class="material-icons">collections</i>
-                </div> */}
-                <Link to={this.props.link}> 
-                <img src={this.props.img} alt=""/>
-                </Link>
-            </div>
+            <div>  <i class="material-icons">redo</i></div>
         </div>
-
-
-
-
-
+        <div className="img_container">
+            {/* <div className="gallery_indicator"> 
+            <i class="material-icons">collections</i>
+            </div> */}
+            <Link to={link}> 
+            <img src={img} alt=""/>
+            </Link>
+        </div>
+    </div>
     )
-  }
-}
+};
+
+ThumbnailList.propTypes = {
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+
+  };
+  
+export default ThumbnailList; 
+
+
+
+
+
+
+

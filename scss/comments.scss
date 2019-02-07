@@ -1,0 +1,26 @@
+.CommentSectionWrapper {
+    // margin-bottom: 50px;
+    border: solid thin rgb(209, 208, 208);
+    padding: 5px;
+
+    .Comment {
+        display: flex;
+        div {
+            padding: 3px;
+        }
+    }
+}
+
+.CommentSectionWrapper .Comment div:nth-child(1) {
+    display: flex;
+}
+
+.CommentSectionWrapper .Comment div:nth-child(2) {
+    display: flex;
+}
+
+.CommentSectionWrapper .Comment div:nth-child(3) {
+    display: flex;
+    align-items: flex-end;
+    @extend .gray_font;
+}

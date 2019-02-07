@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
-export default class Pageheader extends Component {
-  render() {
-    return (
-      <div className="PageHeader">
-        <p>   <i class="material-icons">{this.props.icon}</i> {this.props.text} </p>
-      </div>
-    )
-  }
-}
+
+const PageHeader = ({ icon, text}) => { 
+
+  return(
+    <div className="PageHeader">
+      <p>   <i className="material-icons">{icon}</i> {text} </p>
+  </div>
+  )
+};
+
+PageHeader.propTypes = {
+  icon: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+  
+};
+
+export default PageHeader; 
+
+

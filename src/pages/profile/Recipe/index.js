@@ -43,20 +43,31 @@ export default class ProfileRecipe extends React.Component {
                 <div className="Grid_2Col_Container"> 
 
                     <div className="Column">
+                        <RecipeStep
+                        img="https://photos.smugmug.com/Test/i-MH2SVHP/0/53c840fa/S/pasta-in-boiling-water-S.jpg"
+                        step='Step 1'
+                        text='These are the instructions they will read' 
+                        
+                        />
                         <RecipeStep  
-                        img="https://photos.smugmug.com/Test/i-MH2SVHP/0/53c840fa/S/pasta-in-boiling-water-S.jpg"/>
- 
-                        <RecipeStep  
-                        img="https://photos.smugmug.com/Test/i-VVZ4Jfg/0/dc7beace/S/BreastFifteenSpatulas-S.jpg"/>
+                        img="https://photos.smugmug.com/Test/i-VVZ4Jfg/0/dc7beace/S/BreastFifteenSpatulas-S.jpg"
+                        step='Step 2'
+                        text='These are the instructions they will read' 
+                        />
 
                         <RecipeStep 
-                        img="https://photos.smugmug.com/Test/i-cHSqhLn/0/f7c97ec6/S/Pasta-sauce-from-scratch-S.jpg"/>
+                        img="https://photos.smugmug.com/Test/i-cHSqhLn/0/f7c97ec6/S/Pasta-sauce-from-scratch-S.jpg"
+                        step='Step 3'
+                        text='These are the instructions they will read' 
+                        />
 
                         <RecipeStep 
-                        img="https://photos.smugmug.com/Test/i-8Fmj9SH/0/1e610618/S/mushrooms-S.jpg"/>
+                        img="https://photos.smugmug.com/Test/i-8Fmj9SH/0/1e610618/S/mushrooms-S.jpg"
+                        step='Step 4'
+                        text='These are the instructions they will read' 
+                        />
 
-                        <RecipeStep 
-                        img="https://photos.smugmug.com/Test/i-NPcNLT7/0/4cb0aa81/M/garlic-onions-M.jpg"/>
+                       
 
                     </div>
 

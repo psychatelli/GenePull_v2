@@ -1,54 +1,36 @@
 import React, { Component } from 'react';
-import Avatar from 'react-avatar';
+import button from '@material-ui/core';
+import EditableInput from "../common/editableInput";
 
-export default class TargetDetails extends Component {
-  render() {
-    return (
-      <div className="TargetDetails">  
+const TargetDetails = (props) => {
+  return(
+    <div>
+       <div className="TargetDetails">  
         <div> 
-          <h3>{this.props.title}</h3>
+          <h3>{props.title}</h3>
         </div>
 
-        <div className="Thumbnail"> <img className="Card"  src={this.props.thumbnail} alt=""/> 
+        <div className="Thumbnail"> 
+          <img className="Card"  src={props.thumbnail} alt=""/> 
         </div>
        
-        <div className="Description"> 
-          <p>
-            {this.props.description}
-          </p>
-          </div>
- 
 
-
-        <div class="input-field col s12">
-          <i class="material-icons prefix">textsms</i>
-
-          <input type="text" placeholder="Comment..." className="autocomplete"/>
-        </div>
- 
-        <div className="CommentSectionWrapper"> 
+      <div className="Description"> 
          
-          {/* <div className="Card Comment">
-                <div>
-                <Avatar facebookId={this.props.img} size="50" round={true} /> 
-                </div>
+          <EditableInput {...props}/>
+      </div>
  
-                <div>
-                {this.props.comments}
-                </div>
- 
-                <div>
-                  Reply
-                </div>
-          </div> */}
-       
+        <div className="input-field col s12">
+          <form onSubmit={props.handleCommentSubmit}>
+          <i className="material-icons prefix">textsms</i>
+          <input type="text" placeholder="Comment..." className="autocomplete" value={props.newComment} onChange={props.handleCommentSubmitChange}/>
+          </form>
         </div>
-
-
 
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 
+export default TargetDetails;

@@ -6545,6 +6545,9 @@ input[type=range]::-ms-thumb {
   grid-template-columns: 250px minmax(550px, 950px);
   grid-column-gap: 10px; }
 
+.Column2 {
+  margin-right: 20px; }
+
 .Grid_2Col_Container {
   display: grid;
   grid-column-gap: 10px;
@@ -6560,7 +6563,7 @@ input[type=range]::-ms-thumb {
 .lightest_gray {
   background: #f4f4f4; }
 
-.light_gray, .TargetDetails, .Card, .TreeBranchGroup, .Medical_card {
+.light_gray, .TargetDetails, .Card, .TreeBranchGroup, .TextBox {
   background: #fcfafac9; }
 
 .light_gray_border, .TreeBranchGroup {
@@ -6575,7 +6578,7 @@ input[type=range]::-ms-thumb {
 .medium_gray_opacity, .leftNav li:hover, .PillItemActive {
   background: rgba(40, 44, 42, 0.562); }
 
-.gray_font, .infoCard, .imgPost .controls, .Branch_title, .PageHeader, h3 {
+.gray_font, .infoCard, .imgPost .controls, .Branch_title, .PageHeader, .CommentSectionWrapper .Comment div:nth-child(3), h3 {
   color: gray; }
 
 .wittwer_blue_font {
@@ -6742,10 +6745,6 @@ input[type=range]::-ms-thumb {
   padding: 10px;
   font-size: 20px; }
 
-.Medical_card .Title {
-  color: orange;
-  font-size: 25px; }
-
 .PillList {
   display: flex;
   flex-wrap: wrap; }
@@ -6766,6 +6765,10 @@ input[type=range]::-ms-thumb {
     width: 70%; }
   .TargetDetails h3 {
     margin: 10px 5px 5px 5px; }
+
+.myTextArea {
+  background: yellow !important;
+  color: red; }
 
 .EditNav {
   position: fixed;
@@ -6793,6 +6796,28 @@ input[type=range]::-ms-thumb {
   transition: all .25s ease;
   height: 100vh; }
 
+.CommentSectionWrapper {
+  border: solid thin #d1d0d0;
+  padding: 5px; }
+  .CommentSectionWrapper .Comment {
+    display: flex; }
+    .CommentSectionWrapper .Comment div {
+      padding: 3px; }
+
+.CommentSectionWrapper .Comment div:nth-child(1) {
+  display: flex; }
+
+.CommentSectionWrapper .Comment div:nth-child(2) {
+  display: flex; }
+
+.CommentSectionWrapper .Comment div:nth-child(3) {
+  display: flex;
+  align-items: flex-end; }
+
+.TextBox .Title {
+  color: orange;
+  font-size: 25px; }
+
 body {
   overflow-x: hidden;
   background: #353434;
@@ -6802,7 +6827,7 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
-.Shadow, .Card, .TreeBranchGroup, .Medical_card {
+.Shadow, .Card, .TreeBranchGroup, .TextBox {
   -webkit-box-shadow: 1px 1px 13px 0px #a399a3;
   -moz-box-shadow: 1px 1px 13px 0px #a399a3;
   box-shadow: 1px 1px 13px 0px #a399a3; }
@@ -6827,7 +6852,7 @@ h3 {
 .material-icons {
   vertical-align: middle; }
 
-.Card, .TreeBranchGroup, .Medical_card {
+.Card, .TreeBranchGroup, .TextBox {
   padding: 10px;
   border: solid thin #e0e0e0;
   margin: 10px 0px 10px 0px; }

@@ -10,30 +10,38 @@ import Menu from '@material-ui/core/Menu';
 import TargetDetails from '../../components/TargetDetails/profile';
 import Menu_dropdown from '../common/menu_dropdown';
 
-const ImgPostProfile = (props) => {
-  const { post } = props;
+const ImgPostProfile = ({showDetails, img, name, thumbnail}) => {
 
 
   return(
-      <div onClick={props.showDetails}> 
-        <div className="imgPost Card"> 
-            <div className="controls"> 
-                <div>   
-                  <Avatar facebookId={post.img} size="40" round={true} /> <span className="Name"> {post.name}</span>
-                </div>
+        <div onClick={showDetails}> 
+            <div className="imgPost Card"> 
+                <div className="controls"> 
+                    <div>   
+                    <Avatar facebookId={img} size="40" round={true} /> <span className="Name"> {name}</span>
+                    </div>
 
-                <div> 
-                    <Menu_dropdown/>
+                    <div> 
+                        <Menu_dropdown/>
+                    </div>
                 </div>
-            </div>
-            <div className="img_container">
-                <div className="gallery_indicator"> 
-                <i className="material-icons">collections</i>
-                </div> 
-                <img src={post.thumbnail} alt=""/> 
+                <div className="img_container">
+                    <div className="gallery_indicator"> 
+                    <i className="material-icons">collections</i>
+                    </div> 
+                    <img src={thumbnail} alt=""/> 
+                </div>
             </div>
         </div>
-      </div>
-  )
-}
+        )
+    }
+
+    ImgPostProfile.propTypes = {
+        showDetails: PropTypes.func.isRequired,
+        img: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        thumbnail: PropTypes.string.isRequired,
+      };
+
+
 export default ImgPostProfile;

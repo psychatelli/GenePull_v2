@@ -57,7 +57,6 @@ export default class EditableField extends React.Component {
 
     handleChange = (e) => {
         this.setState({draftText: e.target.value});
-
     }
 
   // actually submit the request etc.
@@ -96,7 +95,7 @@ export default class EditableField extends React.Component {
     }
 
     
-
+ 
     if (this.state.editing) {
       textOrInput = <input
                       autoFocus

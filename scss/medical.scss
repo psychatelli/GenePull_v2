@@ -1,17 +1,4 @@
 
-.Medical_card {
-    @extend .Card;
-    // @extend .medium_gray_opacity;
-
-    .Title {
-        color: orange;
-        font-size: 25px;
-    }
-
-    .Content {
-        // color: white;
-    }
-}
 
 .PillList {
      display: flex;

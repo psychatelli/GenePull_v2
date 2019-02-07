@@ -3,10 +3,9 @@ import React from 'react';
 import LeftNav from '../../../components/LeftNav';
 import InfoCard from '../../../components/Infocard';
 import TreeItem from '../../../components/TreeItem';
-
- 
 import Pageheader from '../../../components/PageHeader';
 import TargetDetails from '../../../components/TargetDetails'
+import TextBox from '../../../components/TextBox';
 
 
 export default class Health extends React.Component {
@@ -16,7 +15,7 @@ export default class Health extends React.Component {
         <div className="Grid_wrapper">
             <div className="Grid_2Col">
 
-            <div className="Column_feed">
+            <div className="Column1">
                 <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                 <LeftNav/>
                 <InfoCard location='St. Petersburg'
@@ -27,7 +26,7 @@ export default class Health extends React.Component {
             </div>
             
 
-            <div> 
+            <div className="Column2">  
                 <div className="HeaderWrapper"> 
                 <Pageheader text="Health Watch" icon="local_hospital" /> 
                 </div>
@@ -48,41 +47,27 @@ export default class Health extends React.Component {
                                 <div className="PillItem">Kidney Stones</div>
                         </div>
                        
-                       <div className="Medical_card">
-                           <div className="Title"> Symptoms </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       
+                       <TextBox 
+                        title= 'Symptoms'
+                        content= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                       />
 
-                       <div className="Medical_card">
-                           <div className="Title"> Treatment Approach </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       <TextBox 
+                        title= 'Treatment Approach'
+                        content= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                       />
 
-                       <div className="Medical_card">
-                           <div className="Title"> Medications </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       <TextBox 
+                        title= 'Medications'
+                        content= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                       />
 
-                       <div className="Medical_card">
-                           <div className="Title"> Results </div>
-                           <div className="Content">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.    
-                            </p>
-                           </div>
-                       </div>
+                       <TextBox 
+                        title= 'Results'
+                        content= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                       />
+
 
                     </div>
 
