@@ -46,25 +46,25 @@ export default class Recipe extends React.Component {
                     <RecipeStep
                         img="https://photos.smugmug.com/Test/i-MH2SVHP/0/53c840fa/S/pasta-in-boiling-water-S.jpg"
                         step='Step 1'
-                        text='These are the instructions they will read' 
+                        instructions='These are the instructions they will read' 
                         
                         />
                         <RecipeStep  
                         img="https://photos.smugmug.com/Test/i-VVZ4Jfg/0/dc7beace/S/BreastFifteenSpatulas-S.jpg"
                         step='Step 2'
-                        text='These are the instructions they will read' 
+                        instructions='These are the instructions they will read' 
                         />
 
                         <RecipeStep 
                         img="https://photos.smugmug.com/Test/i-cHSqhLn/0/f7c97ec6/S/Pasta-sauce-from-scratch-S.jpg"
                         step='Step 3'
-                        text='These are the instructions they will read' 
+                        instructions='These are the instructions they will read' 
                         />
 
                         <RecipeStep 
                         img="https://photos.smugmug.com/Test/i-8Fmj9SH/0/1e610618/S/mushrooms-S.jpg"
                         step='Step 4'
-                        text='These are the instructions they will read' 
+                        instructions='These are the instructions they will read' 
                         />
                     </div>
 

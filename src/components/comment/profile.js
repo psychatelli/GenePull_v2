@@ -27,7 +27,6 @@ Comment.propTypes = {
   id: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired
-  
 };
 
 export default Comment;

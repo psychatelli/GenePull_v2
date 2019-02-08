@@ -6655,8 +6655,7 @@ input[type=range]::-ms-thumb {
 
 .imgPost {
   display: flex;
-  flex-direction: column;
-  padding: 50px; }
+  flex-direction: column; }
   .imgPost .controls {
     display: flex;
     justify-content: space-between;
@@ -6664,13 +6663,15 @@ input[type=range]::-ms-thumb {
     .imgPost .controls i {
       margin-right: 5px; }
   .imgPost .img_container img {
-    width: 100%;
-    margin-top: -20px; }
+    width: 100%; }
   .imgPost .gallery_indicator {
-    position: relative;
-    left: 0px;
-    top: 20px;
-    color: aqua; }
+    position: relative; }
+    .imgPost .gallery_indicator span {
+      position: absolute;
+      top: 5px;
+      right: 2px;
+      z-index: 100;
+      color: aqua; }
     .imgPost .gallery_indicator i {
       float: right;
       padding-right: 10px; }

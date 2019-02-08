@@ -29,10 +29,10 @@ export default class ProfileRecipies extends Component {
 
 
                         <div className="ThumbnailList_Wrapper"> 
-                         <ThumbnailList title="Pizza" link="/recipe" img="https://photos.smugmug.com/Test/i-g5GnVtj/0/da49a56b/S/pizza-S.jpg" />
-                         <ThumbnailList title="Fetuchini Alredo" link="/recipe" img="https://photos.smugmug.com/Test/i-W5SXVkM/0/1d663a9e/S/fettuccine-S.jpg" />
-                         <ThumbnailList title="Enchiladas" link="/recipe" img="https://photos.smugmug.com/Test/i-7fksTb3/0/cafb1120/L/Enchiladas-L.jpg" />
-                         <ThumbnailList title="Tacos" link="/recipe" img="https://photos.smugmug.com/Test/i-n2csRzx/0/1d20a7a3/S/taco1-S.jpg" />
+                         <ThumbnailList title="Pizza" link="/profile/recipe" img="https://photos.smugmug.com/Test/i-g5GnVtj/0/da49a56b/S/pizza-S.jpg" />
+                         <ThumbnailList title="Fetuchini Alredo" link="/profile/recipe" img="https://photos.smugmug.com/Test/i-W5SXVkM/0/1d663a9e/S/fettuccine-S.jpg" />
+                         <ThumbnailList title="Enchiladas" link="/profile/recipe" img="https://photos.smugmug.com/Test/i-7fksTb3/0/cafb1120/L/Enchiladas-L.jpg" />
+                         <ThumbnailList title="Tacos" link="/profile/recipe" img="https://photos.smugmug.com/Test/i-n2csRzx/0/1d20a7a3/S/taco1-S.jpg" />
                         </div> 
                     </div>
                 </div>

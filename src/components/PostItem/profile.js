@@ -10,7 +10,7 @@ import Menu from '@material-ui/core/Menu';
 import TargetDetails from '../../components/TargetDetails/profile';
 import Menu_dropdown from '../common/menu_dropdown';
 
-const ImgPostProfile = ({showDetails, img, name, thumbnail}) => {
+const PostItem = ({showDetails, avatar, name, thumbnail, gallery}) => {
 
 
   return(
@@ -18,7 +18,7 @@ const ImgPostProfile = ({showDetails, img, name, thumbnail}) => {
             <div className="imgPost Card"> 
                 <div className="controls"> 
                     <div>   
-                    <Avatar facebookId={img} size="40" round={true} /> <span className="Name"> {name}</span>
+                    <Avatar facebookId={avatar} size="40" round={true} /> <span className="Name"> {name}</span>
                     </div>
 
                     <div> 
@@ -27,8 +27,9 @@ const ImgPostProfile = ({showDetails, img, name, thumbnail}) => {
                 </div>
                 <div className="img_container">
                     <div className="gallery_indicator"> 
-                    <i className="material-icons">collections</i>
+                    <span> <i className="material-icons"> { gallery ? "collections" : ""} </i></span>
                     </div> 
+
                     <img src={thumbnail} alt=""/> 
                 </div>
             </div>
@@ -36,12 +37,13 @@ const ImgPostProfile = ({showDetails, img, name, thumbnail}) => {
         )
     }
 
-    ImgPostProfile.propTypes = {
+    PostItem.propTypes = {
         showDetails: PropTypes.func.isRequired,
-        img: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         thumbnail: PropTypes.string.isRequired,
+        gallery: PropTypes.bool.isRequired
       };
 
 
-export default ImgPostProfile;
+export default PostItem;

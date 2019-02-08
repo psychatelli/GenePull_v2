@@ -1,14 +1,12 @@
 .imgPost {
     display: flex;
     flex-direction: column;
-    padding: 50px;
 
         .controls { 
             display: flex;
             justify-content: space-between;
             @extend .gray_font; 
-            padding: 8px; 
-            
+            padding: 8px;
             .Name {
                 @extend .dark_gray_font;
             }
@@ -18,18 +16,22 @@
             }
         }
 
-
-        
-    .img_container img{
-        width: 100%;
-        margin-top: -20px;
-    }
+        .img_container img{
+            width: 100%;
+        }
 
     .gallery_indicator {
-        position: relative; 
-        left: 0px; 
-        top: 20px;     
-        color: aqua; 
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 5px;
+            right: 2px;
+            z-index: 100;
+            color: aqua; 
+
+        }
+       
  
             i {
                 float: right;
@@ -37,3 +39,6 @@
             }
         }
 }
+
+
+        

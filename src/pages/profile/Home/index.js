@@ -4,10 +4,9 @@ import InfoCard from '../../../components/Infocard';
 import TreeItem from '../../../components/TreeItem';
 
 import InfoCardSkills from '../../../components/Infocard/skills';
-import ImgPostProfile from '../../../components/PostItem/profile';
+import PostItem from '../../../components/PostItem/profile';
 import TargetDetails from '../../../components/TargetDetails/profile';
 import Pageheader from '../../../components/PageHeader'; 
-import Button from '@material-ui/core/Button';
 import Comment from '../../../components/comment/profile';
 import EditableInput from '../../../components/common/editableInput';
 
@@ -24,64 +23,82 @@ import EditableInput from '../../../components/common/editableInput';
             Data : [
                 {
                     id: 0,
-                    img: '100008343750912',
+                    avatar: '100008343750912',
                     name: 'Adam Donatelli',
                     thumbnail: 'https://photos.smugmug.com/Test/i-J6mRXp2/0/6d0fc701/S/phoenixvaca-S.jpg',
+                    gallery: true,
                     description: '0 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                    likes: [
+                        {
+                            user: '',
+                        },
+                        {
+                            user: '',
+                        },
+                    ],
                     comments: [
                                 {
-                                id: 0,
-                                img: '100008343750912',
-                                comment: '0 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                                    id: 0,
+                                    user: '',
+                                    avatar: '100008343750912',
+                                    comment: '0 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
                                 },
                                 {
                                 id: 1,
-                                img: '100008343750912',
+                                user: '',
+                                avatar: '100008343750912',
                                 comment: '0 - Lorem ipsum dolor sit amet, consectetur.',
                                 }
                               ]
                     },
                     {
                     id: 1,
-                    img: '100008343750912',
+                    avatar: '100008343750912',
                     name: 'Sam Jones II',
                     thumbnail: 'https://photos.smugmug.com/Test/i-fwbctT5/0/1c13d36b/S/floridafamily-S.jpg',
+                    gallery: false,
                     description: '1 - Lorem ipsum dolor sit amet, . ',
                     comments: [
                                 {
                                 id: 0,
-                                img: '100008343750912',
+                                user: '',
+                                avatar: '100008343750912',
                                 comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
                                 },
                                 {
                                 id: 1,
-                                img: '100008343750912',
+                                user: '',
+                                avatar: '100008343750912',
                                 comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
                                 }
                               ]
                     },
                     {
                     id: 2,   
-                    img: '100008343750912',
+                    avatar: '100008343750912',
                     name: 'Donald Jones',
                     thumbnail: 'https://photos.smugmug.com/Test/i-3J6gxXV/0/d9bc62f6/S/LonelyGirl-S.jpg',
+                    gallery: true,
                     description: '2 - Lorem ipsum dolor sit amet. ',
                     comments: [
                                 {
                                 id: 0,
-                                img: '100008343750912',
+                                user: '',
+                                avatar: '100008343750912',
                                 comment: '2 - Lorem ipsum dolor sit amet.',
                                 },
                                 {
                                 id: 1,
-                                img: '100008343750912',
+                                user: '',
+                                avatar: '100008343750912',
                                 comment: '2 - Lorem ipsum dolor sit amet, consectetur..',
                                 },
                                 {
-                                    id: 3,
-                                    img: '100008343750912',
-                                    comment: '2 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
-                                    }
+                                id: 3,
+                                user: '',
+                                avatar: '100008343750912',
+                                comment: '2 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                                }
                               ]
                     },
             ],
@@ -105,24 +122,8 @@ import EditableInput from '../../../components/common/editableInput';
         });
      }
 
-    //  findComments(I) { 
-        
-    //     const CommentsData = this.state.Data[I].comments;
-    //     const PostComments = CommentsData.map(x => (
-    //             <Comment  
-    //             key={x.id}  
-    //             avatar={x.img} 
-    //             comment={x.comment} />
-    //     ))
+  
 
-    //     return(
-    //         <div> 
-    //         {PostComments}
-    //         </div>
-    //     )
-    // }
-
- 
     handleCommentSubmitChange(event) {
         this.setState({newComment: event.target.value});
         }
@@ -135,7 +136,7 @@ import EditableInput from '../../../components/common/editableInput';
 
             this.state.Data.push({
                 id: 3,
-                img: '100008343750912',
+                avatar: '100008343750912',
                 comment: newComment,
             })
             console.log(this.state.Data);
@@ -144,13 +145,13 @@ import EditableInput from '../../../components/common/editableInput';
 
         render() {
         const PostFeed = this.state.Data.map(posts => (
-            <ImgPostProfile key={posts.id} name={posts.name}  img={posts.img} thumbnail={posts.thumbnail} showDetails={this.ShowDetails.bind(this, posts)}  />
+            <PostItem key={posts.id} name={posts.name}  avatar={posts.avatar} thumbnail={posts.thumbnail} gallery={posts.gallery} showDetails={this.ShowDetails.bind(this, posts)}  />
         ));
 
         const myComments = this.state.Data[this.state.selectedComment].comments.map(x => (
             <Comment  
                 key={x.id}  
-                avatar={x.img} 
+                avatar={x.avatar} 
                 comment={x.comment} />
         ));
 
@@ -158,15 +159,10 @@ import EditableInput from '../../../components/common/editableInput';
       return (
         <div className="Wrapper"> 
 
-        <div className={ this.state.sideNavToggle ? "EditNav" : "Hidden"}>
-            <p>Edit Post</p>
-        </div>
-
         <div className="Grid_wrapper">
             <div className="Grid_2Col">
             
                 <div className="Column1">
-                    <button className="outlined" onClick={() => this.setState({sideNavToggle: !this.state.sideNavToggle}) }> Sidenav</button>
                     <TreeItem img="100008343750912" name="Adam Donatelli (ME)" location="St. Petersburg" bornYear="1983"/>
                     <LeftNav/>
                     <InfoCard location='St. Petersburg' age='35' education='University of Arizona' bornIn="Hobbs,NM" />

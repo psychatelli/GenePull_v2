@@ -10,6 +10,7 @@ import TargetDetails from '../../../components/TargetDetails/profile';
 import Pill from '../../../components/common/pill';
 import Comment from '../../../components/comment/profile';
 import Textbox from '../../../components/TextBox';
+import RightNav from '../../../components/RightNav';
 
 export default class ProfileHealth extends React.Component {
 
@@ -22,6 +23,7 @@ export default class ProfileHealth extends React.Component {
                 selectedMedications: this.selectedMedications,
                 selectedResults: this.selectedResults,
                 selectedComment: 0,
+                sideNavToggle: false,
                 Data : [
                     {
                         id: 0,
@@ -33,11 +35,13 @@ export default class ProfileHealth extends React.Component {
                         comments: [
                                     {
                                     id: 0,
+                                    user: '',
                                     img: '100008343750912',
                                     comment: '0 - Lorem ipsum dolor sit amet, consectetur adipiscing.',
                                     },
                                     {
                                     id: 1,
+                                    user: '',
                                     img: '100008343750912',
                                     comment: '0 - Lorem ipsum dolor sit amet, consectetur.',
                                     }
@@ -53,11 +57,13 @@ export default class ProfileHealth extends React.Component {
                         comments: [
                                     {
                                     id: 0,
+                                    user: '',
                                     img: '100008343750912',
                                     comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
                                     },
                                     {
                                     id: 1,
+                                    user: '',
                                     img: '100008343750912',
                                     comment: '1 - Lorem ipsum dolor sit amet, consectetur.',
                                     }
@@ -96,10 +102,11 @@ export default class ProfileHealth extends React.Component {
         ));
 
         const Comments = this.state.Data[this.state.selectedComment].comments.map(x => (
-            <Comment  
+                <Comment  
                 key={x.id}  
                 avatar={x.img} 
-                comment={x.comment} />
+                comment={x.comment} 
+                />
         ));
 
 
@@ -109,12 +116,16 @@ export default class ProfileHealth extends React.Component {
 
       return (
         <div className="Wrapper"> 
+
+        <RightNav sideNavToggle={this.state.sideNavToggle}>
+            <p>this is items</p>
+        </RightNav>
+
         <div className="Grid_wrapper">
             <div className="Grid_2Col">
-
-
-
             <div className="Column1">
+            <button className="outlined" onClick={() => this.setState({sideNavToggle: !this.state.sideNavToggle}) }> Sidenav</button>
+
                 <TreeItem img="100008343750912" name="Adam Donatelli" location="St. Petersburg" bornYear="1983"/>
                 <LeftNav/>
                 <InfoCard 
