@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import { Provider } from 'react-redux';
+import store from './store';
 import  {BrowserRouter as Router, Route, Switch}  from 'react-router-dom';
 import Nav from './components/Nav';
 import PublicHome  from './pages/public/Home';
@@ -13,10 +16,7 @@ import Tree from './pages/public/Tree';
 import FullTree from './pages/public/Tree/fullTree';
 import GrandparentsTree from './pages/public/Tree/grandparents';
 
-
 import Profile  from './pages/profile/Home';
-import EditableField  from './pages/profile/Home/example';
-
 import ProfileGalleries from './pages/profile/Galleries';
 import ProfileGallery from './pages/profile/Gallery';
 import ProfileRecipies from './pages/profile/Recipies';
@@ -25,10 +25,13 @@ import ProfileHealth from './pages/profile/Health';
 import ProfileTree from './pages/profile/Tree';
 import ProfileFullTree from './pages/profile/Tree/fullTree';
 import ProfileGrandparentsTree from './pages/profile/Tree/grandparents';
+// import { applyMiddleware } from '../../Library/Caches/typescript/3.1/node_modules/redux';
+
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
         <Router>
           <div>
             <Nav/>
@@ -45,7 +48,6 @@ class App extends Component {
               <Route exact path="/tree/grandparents" component={GrandparentsTree} />
 
 
-              <Route exact path="/profile2" component={EditableField} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/profile/galleries" component={ProfileGalleries} />
               <Route exact path="/profile/gallery" component={ProfileGallery} />
@@ -60,6 +62,7 @@ class App extends Component {
               </div>
           </div>
         </Router>
+        </Provider>
       
     );
   }

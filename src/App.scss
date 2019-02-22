@@ -1,4 +1,3 @@
-@import "../scss/materialize";
 @import "../scss/grid";
 @import "../scss/colors";
 @import "../scss/leftnav";
@@ -7,13 +6,14 @@
 @import "../scss/imgPost";
 @import "../scss/treeBranchGroup";
 @import "../scss/thumbnailList.scss";
-@import "../scss//pageHeader.scss";
-@import '../scss/medical.scss';
-@import '../scss/targetDetails.scss';
-@import '../scss/editNav';
+@import "../scss//pageHeader";
+@import '../scss/medical';
+@import '../scss/targetDetails';
+@import '../scss/rightNav';
 @import '../scss/comments';
-@import '../scss/textBox.scss';
-
+@import '../scss/textBox';
+@import '../scss/recipe';
+@import "../scss/materialize";
 
 
 body {
@@ -88,6 +88,59 @@ h3 {
     top: 70px!important;
     right: 0px!important;
   }
+
+  .spacebetween {
+      display: flex;
+      justify-content: space-between
+  }
+
+.imgUploadBtn {
+    
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+    border-radius: 10px;
+    border: solid thin rgb(163, 161, 161);
+    @extend .gray_font;
+    font-size: 20px;
+    width: 70px;
+}
+
+.imgUploadBtn:hover {
+    cursor: pointer;
+}
+
+  .fadeIn {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 
  

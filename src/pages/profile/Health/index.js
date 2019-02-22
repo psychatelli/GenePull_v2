@@ -6,7 +6,7 @@ import TreeItem from '../../../components/TreeItem';
 
  
 import Pageheader from '../../../components/PageHeader';
-import TargetDetails from '../../../components/TargetDetails/profile';
+import TargetDetails from '../../../components/TargetDetails';
 import Pill from '../../../components/common/pill';
 import Comment from '../../../components/comment/profile';
 import Textbox from '../../../components/TextBox';
@@ -28,7 +28,7 @@ export default class ProfileHealth extends React.Component {
                     {
                         id: 0,
                         title: 'Constant Headackes',
-                        symptoms: 'head hurt',
+                        symptoms: 'My head was hurting at least once every 2-3 days.  I would become tired and feel dizzy and shit.',
                         treatment: 'Adam Donatelli',
                         medications: 'coffe',
                         results: 'felt better',
@@ -50,9 +50,9 @@ export default class ProfileHealth extends React.Component {
                         {
                         id: 1,
                         title: 'Pimples',
-                        symptoms: 'Face looked bad',
-                        treatment: 'Adam Donatelli',
-                        medications: 'coffe',
+                        symptoms: 'Face looked like someone had a dirt bike race on it.',
+                        treatment: 'eating garlic and onions',
+                        medications: 'none fool',
                         results: 'felt better',
                         comments: [
                                     {
@@ -94,6 +94,7 @@ export default class ProfileHealth extends React.Component {
     render() {
 
         const Pills = this.state.Data.map(medical => (
+                
                 <Pill 
                 selected={'PillItem'} 
                 text={medical.title}
@@ -145,8 +146,16 @@ export default class ProfileHealth extends React.Component {
         <div className="Grid_2Col_Modified"> 
 
                     <div className="Column">
+
+                         <div className="spacebetween">
+                            <div></div>
+                            <div>
+                                <a title="Add a step"  onClick={this.scroll} className="btn-floating btn-small waves-effect waves-light grey"><i className="material-icons">add</i></a>
+                            </div>  
+                         </div>
+
                         <div className="PillList">
-                                {Pills}
+                        {Pills}
                         </div>
                        
                        <Textbox 

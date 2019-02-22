@@ -1,49 +1,80 @@
 import React, { Component } from 'react'
 import Avatar from 'react-avatar';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import { Link } from 'react-router-dom';
-
-import List from '@material-ui/core/List';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import TargetDetails from '../../components/TargetDetails/profile';
-import Menu_dropdown from '../common/menu_dropdown';
-
-const PostItem = ({showDetails, avatar, name, thumbnail, gallery}) => {
+// import MenuItem from '@material-ui/core/MenuItem';
+// import Menu from '@material-ui/core/Menu';
+import { deletePost  } from '../../actions/postActions';
+ 
 
 
-  return(
-        <div onClick={showDetails}> 
+class PostItem extends Component {
+
+
+    onDeletePost(id) {
+        this.props.deletePost(id)
+
+    }
+
+    render() {
+        const { postId, displayDetails, avatar, name, thumbnail, gallery, liked, findUserLike, deletePost } = this.props;
+
+
+        return (
+
+           
+        <div onClick={displayDetails}> 
             <div className="imgPost Card"> 
+            {/* <button 
+            className="waves-effect waves-light btn" 
+            onClick={this.onDeletePost.bind(this, postId)}> Delete 
+            </button> */}
+
                 <div className="controls"> 
                     <div>   
-                    <Avatar facebookId={avatar} size="40" round={true} /> <span className="Name"> {name}</span>
+                        <Avatar facebookId={avatar} size="40" round={true} /> <span className="Name"> {name}</span>
                     </div>
 
                     <div> 
-                        <Menu_dropdown/>
+                        <i onClick={findUserLike} className="material-icons"> {liked ? 'favorite_border' : 'favorite'} </i> 
+                        <i className="material-icons">redo</i>
+
                     </div>
                 </div>
-                <div className="img_container">
-                    <div className="gallery_indicator"> 
-                    <span> <i className="material-icons"> { gallery ? "collections" : ""} </i></span>
-                    </div> 
 
-                    <img src={thumbnail} alt=""/> 
+                    <div className="img_container">
+                        <div className="gallery_indicator"> 
+                            <span> <i className="material-icons"> {gallery ? 'collections' : ''} </i></span>
+                        </div> 
+
+                        <img src={thumbnail} alt=""/> 
+
+                    </div>
                 </div>
             </div>
-        </div>
+ 
         )
     }
+}
+
 
     PostItem.propTypes = {
-        showDetails: PropTypes.func.isRequired,
-        avatar: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        thumbnail: PropTypes.string.isRequired,
-        gallery: PropTypes.bool.isRequired
-      };
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired,
+    gallery: PropTypes.bool.isRequired,
+    deletePost: PropTypes.func.isRequired,
+    displayDetails: PropTypes.func.isRequired,
+
+    // liked: PropTypes.bool.isRequired,
+    // postId: PropTypes.string.isRequired
+    };
 
 
-export default PostItem;
+
+const mapStateToProps = state => ({
+
+  });
+  
+  export default connect(mapStateToProps, { deletePost })(PostItem);

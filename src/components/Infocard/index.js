@@ -49,8 +49,9 @@ class InfoCard extends Component {
       <div >
       <ExpansionPanel className="Card" expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>        <div className='infoTitle'> <i class="material-icons">person</i>  </div>
-</Typography>
+            <Typography className={classes.heading}>        
+            <div className='infoTitle'> <i className="material-icons">person</i>  </div>
+          </Typography>
             <Typography className={classes.secondaryHeading}>About</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -67,7 +68,7 @@ class InfoCard extends Component {
 
          <ExpansionPanel className="Card" expanded={expanded === 'panel2'} onChange={this.handleChange('panel2')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>  <i class="material-icons">card_giftcard</i> </Typography>
+            <Typography className={classes.heading}>  <i className="material-icons">card_giftcard</i> </Typography>
             <Typography className={classes.secondaryHeading}>Knowledge</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>

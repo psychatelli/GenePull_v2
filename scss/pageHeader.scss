@@ -2,8 +2,7 @@
 
 .HeaderWrapper {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @extend .spacebetween;
     align-items: center;
     height: 70px;
 }

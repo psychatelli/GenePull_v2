@@ -17,8 +17,7 @@ const Nav = () => {
                         <Link to="/profile"> 
                             <span className="large material-icons">account_circle</span> Adam
                         </Link></li>
-                        <li><a href="badges.html"><span> <i className="large material-icons">arrow_drop_down</i> </span></a></li>
-                        <li><a href="collapsible.html"></a></li>
+                        <li><a href='#'><span> <i className="large material-icons">arrow_drop_down</i> </span></a></li>
                     </ul>
                 </div>
             </nav>

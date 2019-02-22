@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import Avatar from 'react-avatar';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -15,7 +15,7 @@ const TreeBranchItem = ({ img, link, name, bornYear}) => {
       </div>
       <div className="box"> <Link to={link}> {name} </Link> </div>
       <div className="box">
-          {bornYear}
+          {/* {bornYear} */}
       </div>
     
 </div>

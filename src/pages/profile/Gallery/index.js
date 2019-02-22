@@ -7,7 +7,7 @@ import TreeItem from '../../../components/TreeItem';
 import InfoCardSkills from '../../../components/Infocard/skills';
 import PostItem from '../../../components/PostItem';
 import TreeBranchGroup from '../../../components/TreeBranchGroup';
-import TargetDetails from '../../../components/TargetDetails';
+import TargetDetails from '../../../components/TargetDetails/profile';
 import Pageheader from '../../../components/PageHeader';
 
  
@@ -39,6 +39,14 @@ export default class ProfileGallery extends React.Component {
                 <div className="Grid_2Col_Container"> 
 
                     <div className="Column">
+
+                        <div className="spacebetween">
+                            <div></div>
+                            <div>
+                            <a title="Add a step"  onClick={this.scroll} className="btn-floating btn-small waves-effect waves-light grey"><i className="material-icons">add</i></a>
+                            </div>  
+                        </div>
+                        
                         <PostItem img="1174001948" name="Linda Aldas" 
                         post="https://photos.smugmug.com/Test/i-J6mRXp2/0/6d0fc701/S/phoenixvaca-S.jpg"/>
 

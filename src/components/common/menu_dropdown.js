@@ -45,7 +45,6 @@ class Menu_dropdown extends React.Component {
         <div> 
                 <div> 
                     <List>
-                        <i class="material-icons">favorite_border</i> 
                         <a  aria-haspopup="true" aria-controls="lock-menu" onClick={this.handleClickListItem}>
                         <i className="material-icons">more_horiz</i></a>
                     </List>

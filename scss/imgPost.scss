@@ -1,6 +1,10 @@
 .imgPost {
     display: flex;
     flex-direction: column;
+    @extend .fadeIn;
+
+    
+
 
         .controls { 
             display: flex;
@@ -39,6 +43,9 @@
             }
         }
 }
+
+
+
 
 
         

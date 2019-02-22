@@ -3,7 +3,7 @@
     display: grid;
     // grid-template-columns: 390px 390px;
     grid-template-columns: repeat(auto-fill, 390px );
-
+    @extend .fadeIn;
     justify-content: center;
     grid-gap: 1em;
 }

@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import Avatar from 'react-avatar';
 import PropTypes from 'prop-types';
 
 const TreeItem = ({ img, name, location, bornYear }) => {
   return (
-<div>
+      <div>
         <div className="treeItem">
             <div className="box">
             <Avatar facebookId={img} size="50" round={true} />  
             </div>
             <div className="box"> {name} <br/> {location}</div>
             <div className="box">
-                {bornYear} 
             </div>
         </div>
       </div>

@@ -47,19 +47,25 @@ export default class EditableInput extends Component {
             });
         }
     
-        handleCancel = () => {
+        handleCancel = (e) => {
+          e.preventDefault();
+
             this.setState({draftText: this.state.text});
-            this.toggleEditing();
+            this.toggleEditing(e);
         }
         
         handleClickOutside = (e) => {
+          e.preventDefault();
+
           if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
-              this.toggleEditing();
+              this.toggleEditing(e);
           }
       }
 
 
-        toggleEditing = () => {
+        toggleEditing = (e) => {
+           e.preventDefault();
+
             // so we can close on outside click
             if (this.state.editing) {
                 document.removeEventListener('mousedown', this.handleClickOutside);
@@ -72,7 +78,6 @@ export default class EditableInput extends Component {
     
         handleChange = (e) => {
             this.setState({draftText: e.target.value});
-    
         }
     
       // actually submit the request etc.
@@ -111,7 +116,7 @@ export default class EditableInput extends Component {
         error = <span className="error">error!</span>
       }
 
-
+ 
 
       if (this.state.editing) {
         textOrInput = <div>
@@ -126,9 +131,6 @@ export default class EditableInput extends Component {
 
         />
         </div>
-
-                       
-  
         controlLinks = (
           <div>
             <a className="edit-link blue-link" onClick={this.handleCancel} href="#">CANCEL</a>

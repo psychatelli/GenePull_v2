@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'react-avatar';
+import CommentItem from './commentItem';
 
+class CommentFeed extends Component {
+  render() {
+    const { comments, postId } = this.props;
 
-const Comment = ({id, avatar, comment }) => {
-    return (
-      <div className="CommentSectionWrapper"> 
-          <div className="Card Comment"> 
-              <div key={id} >
-              <Avatar facebookId={avatar} size="50" round={true} /> 
-              </div>
+    return comments.map(comment => (
+        <CommentItem key={comment.id} comment={comment}  />
 
-              <div>
-              {comment}
-              </div>
+    ));
+  }
+}
 
-              <div>
-                Reply
-              </div>
-          </div>
-      </div>  
-    )
+CommentFeed.propTypes = {
+  comments: PropTypes.array.isRequired,
 };
 
-Comment.propTypes = {
-  id: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  comment: PropTypes.string.isRequired
-};
+export default CommentFeed;
 
-export default Comment;
+
+
+

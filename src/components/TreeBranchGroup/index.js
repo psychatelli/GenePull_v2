@@ -6,7 +6,7 @@ export default class TreeBranchGroup extends Component {
     return (
      
           <div className="TreeBranchGroup">
-                <div className="Branch_title">{this.props.title}</div>
+                <div className="Branch_title">{this.props.title} </div>
 
                 <div className="TreeBranchGroup_Parent">
                     <div className="Member">            
