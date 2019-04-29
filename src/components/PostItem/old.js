@@ -24,7 +24,6 @@ class PostItem extends Component {
 
 
         return (
-
            
         <div onClick={showDetails}> 
             <div className="imgPost Card"> 

@@ -24,7 +24,6 @@ class Profile extends React.Component {
 
     componentWillMount() {
         this.props.fetchPosts();
-
     }
 
 
@@ -65,11 +64,8 @@ class Profile extends React.Component {
     // }
 
  
-
-    
- 
-        render() {
-            const { post, posts } = this.props;
+    render() {
+        const { post, posts } = this.props;
 
 
     const PostFeed = posts.map(item => (
@@ -84,32 +80,32 @@ class Profile extends React.Component {
     ));
 
 
-                const PostDetails = () => {
-                    if (!post.name == '') {
-                        return  <div> 
-                            <TargetDetails
-                            postId={post.id}  
-                            thumbnail={post.thumbnail} 
-                            description={post.description}
+        const PostDetails = () => {
+            if (!post.name == '') {
+                return  <div> 
+                    <TargetDetails
+                    postId={post.id}  
+                    thumbnail={post.thumbnail} 
+                    description={post.description}
 
-                            />
-                            <CommentFeed comments={post.comments} />
-                            </div>
-                    }
-                    return <div> {firstPost}</div>
-                    }
+                    />
+                    <CommentFeed comments={post.comments} />
+                    </div>
+            }
+            return <div> {firstPost}</div>
+            }
 
 
     const firstPost = posts.slice(0, 1).map(item => (
         <div>
                 <TargetDetails 
-            thumbnail={item.thumbnail} 
-            description={item.description}
-            postId={item.id}
-            />
+                thumbnail={item.thumbnail} 
+                description={item.description}
+                postId={item.id}
+                />
 
             <CommentFeed postId={item.id} comments={item.comments} />
-            </div>
+        </div>
     ));
             
  

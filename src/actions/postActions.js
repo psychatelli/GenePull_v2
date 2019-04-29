@@ -139,3 +139,13 @@ export const fetchPosts = () => dispatch => {
         }) )
     }
 
+
+    // export const putItem = (id, item) => dispatch => {
+    //     axios.put(`/api/items/${id}`, item).then(res =>
+    //       dispatch({
+    //         type: PUT_ITEM,
+    //         payload: res.data
+    //       })
+    //     );
+    //   };
+
