@@ -6,6 +6,7 @@ import store from './store';
 import  {BrowserRouter as Router, Route, Switch}  from 'react-router-dom';
 import Nav from './components/Nav';
 import PublicHome  from './pages/public/Home';
+import HookExample from './pages/public/Hooks/HookExample';
 import TestGrid  from './components/TestGrid';
 import PublicGalleries from './pages/public/Galleries';
 import Gallery from './pages/public/Gallery';
@@ -26,17 +27,21 @@ import ProfileTree from './pages/profile/Tree';
 import ProfileFullTree from './pages/profile/Tree/fullTree';
 import ProfileGrandparentsTree from './pages/profile/Tree/grandparents';
 // import { applyMiddleware } from '../../Library/Caches/typescript/3.1/node_modules/redux';
-
-
+import Test from './test';
 class App extends Component {
   render() {
+
+    
+
     return (
       <Provider store={store}>
         <Router>
           <div>
             <Nav/>
               <div className="Wrapper"> 
-              <Route exact path="/public-profile" component={PublicHome} />
+              {/* <Route exact path="/public-profile" component={PublicHome} /> */}
+              <Route exact path="/" component={Test} />
+              <Route exact path="/public-profile" component={HookExample} />
               <Route exact path="/galleries" component={PublicGalleries} />
               <Route exact path="/test-grid" component={TestGrid} />
               <Route exact path="/gallery" component={Gallery} />

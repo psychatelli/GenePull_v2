@@ -92,6 +92,7 @@ class Profile extends React.Component {
                     <CommentFeed comments={post.comments} />
                     </div>
             }
+
             return <div> {firstPost}</div>
             }
 
